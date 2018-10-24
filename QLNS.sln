@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNS.GUI", "DETAI\QLNS.GUI.csproj", "{8755BCF6-B321-4475-983D-DE47946997EA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNS.Model", "QLNS.Model\QLNS.Model.csproj", "{6063F76E-3628-417D-9CA9-7274D87E8509}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNS.Service", "QLNS.Service\QLNS.Service.csproj", "{1BD11E4C-E792-4D33-85AB-47BD51D459F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNS.Data", "QLNS.Data\QLNS.Data.csproj", "{01F6988E-CA03-4B5A-8E03-079379259B73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNS.UI", "QLNS.UI\QLNS.UI.csproj", "{A5BD3C89-A7EB-4042-A5E6-EC7656D7CA1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8755BCF6-B321-4475-983D-DE47946997EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8755BCF6-B321-4475-983D-DE47946997EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8755BCF6-B321-4475-983D-DE47946997EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8755BCF6-B321-4475-983D-DE47946997EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6063F76E-3628-417D-9CA9-7274D87E8509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6063F76E-3628-417D-9CA9-7274D87E8509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6063F76E-3628-417D-9CA9-7274D87E8509}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{01F6988E-CA03-4B5A-8E03-079379259B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F6988E-CA03-4B5A-8E03-079379259B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01F6988E-CA03-4B5A-8E03-079379259B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5BD3C89-A7EB-4042-A5E6-EC7656D7CA1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5BD3C89-A7EB-4042-A5E6-EC7656D7CA1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5BD3C89-A7EB-4042-A5E6-EC7656D7CA1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5BD3C89-A7EB-4042-A5E6-EC7656D7CA1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
