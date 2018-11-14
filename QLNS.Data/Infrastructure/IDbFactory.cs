@@ -8,6 +8,6 @@ namespace QLNS.Data.Infrastructure
 {
     public interface IDbFactory : IDisposable
     {
-        QLNSDbContext Init();
+        MyQLNSDbContext Init();
     }
 }
