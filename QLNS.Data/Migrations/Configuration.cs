@@ -1,4 +1,4 @@
-namespace QLNS.Data.Migrations
+﻿namespace QLNS.Data.Migrations
 {
     using System;
     using System.Data.Entity;
@@ -16,6 +16,12 @@ namespace QLNS.Data.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
+            using (var db = new MyQLNSDbContext())
+            {
+                Department dp = new Department() { Name = "Bộ phận văn phòng", Alias = "bo-phan-van-phong" };
+                db.Departments.Add(dp);
+                db.SaveChanges();
+            }
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
         }

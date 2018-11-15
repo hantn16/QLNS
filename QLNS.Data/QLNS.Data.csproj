@@ -84,15 +84,6 @@
     <Compile Include="Repositories\WorkingProcessRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QLNS.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="QLNS_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>QLNS.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
