@@ -21,24 +21,15 @@ namespace QLNS.UI
         public frmMain()
         {
             InitializeComponent();
-            employeesUserControl = CreateUserControl("Employees");
-            customersUserControl = CreateUserControl("Customers");
+            employeesUserControl = CreateUserControl(new usEmployeeDetail(),"Employees");
+            //customersUserControl = CreateUserControl("Customers");
+            customersUserControl = CreateUserControl(new usListObject(), "Customers");
             accordionControl.SelectedElement = employeesAccordionControlElement;
         }
-        XtraUserControl CreateUserControl(string text)
+        XtraUserControl CreateUserControl(XtraUserControl result, string text)
         {
-            XtraUserControl result = new XtraUserControl();
             result.Name = text.ToLower() + "UserControl";
             result.Text = text;
-            LabelControl label = new LabelControl();
-            label.Parent = result;
-            label.Appearance.Font = new Font("Tahoma", 25.25F);
-            label.Appearance.ForeColor = Color.Gray;
-            label.Dock = System.Windows.Forms.DockStyle.Fill;
-            label.AutoSizeMode = LabelAutoSizeMode.None;
-            label.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            label.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            label.Text = text;
             return result;
         }
         void accordionControl_SelectedElementChanged(object sender, SelectedElementChangedEventArgs e)
@@ -72,8 +63,9 @@ namespace QLNS.UI
         }
         void RecreateUserControls(DocumentEventArgs e)
         {
-            if (e.Document.Caption == "Employees") employeesUserControl = CreateUserControl("Employees");
-            else customersUserControl = CreateUserControl("Customers");
+            if (e.Document.Caption == "Employees") employeesUserControl = CreateUserControl(new usEmployeeDetail(),"Employees");
+            //else customersUserControl = CreateUserControl("Customers");
+            else customersUserControl = new usListObject();
         }
     }
 }

@@ -55,9 +55,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
             // ribbonControl
-            //
+            // 
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
@@ -76,67 +76,67 @@
             this.ribbonControl.Size = new System.Drawing.Size(790, 143);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            //
+            // 
             // skinRibbonGalleryBarItem
-            //
+            // 
             this.skinRibbonGalleryBarItem.Id = 14;
             this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
-            //
+            // 
             // barSubItemNavigation
-            //
+            // 
             this.barSubItemNavigation.Caption = "Navigation";
             this.barSubItemNavigation.Id = 15;
-            this.barSubItemNavigation.ImageUri.Uri = "NavigationBar";
+            this.barSubItemNavigation.ImageOptions.ImageUri.Uri = "NavigationBar";
             this.barSubItemNavigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.employeesBarButtonItem),
             new DevExpress.XtraBars.LinkPersistInfo(this.customersBarButtonItem)});
             this.barSubItemNavigation.Name = "barSubItemNavigation";
-            //
+            // 
             // employeesBarButtonItem
-            //
+            // 
             this.employeesBarButtonItem.Caption = "Employees";
             this.employeesBarButtonItem.Id = 46;
             this.employeesBarButtonItem.Name = "employeesBarButtonItem";
             this.employeesBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
-            //
+            // 
             // customersBarButtonItem
-            //
+            // 
             this.customersBarButtonItem.Caption = "Cutomers";
             this.customersBarButtonItem.Id = 47;
             this.customersBarButtonItem.Name = "customersBarButtonItem";
             this.customersBarButtonItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonNavigation_ItemClick);
-            //
+            // 
             // ribbonPage
-            //
+            // 
             this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroupNavigation,
             this.ribbonPageGroup});
             this.ribbonPage.Name = "ribbonPage";
             this.ribbonPage.Text = "View";
-            //
+            // 
             // ribbonPageGroupNavigation
-            //
+            // 
             this.ribbonPageGroupNavigation.ItemLinks.Add(this.barSubItemNavigation);
             this.ribbonPageGroupNavigation.Name = "ribbonPageGroupNavigation";
             this.ribbonPageGroupNavigation.Text = "Module";
-            //
+            // 
             // ribbonPageGroup
-            //
+            // 
             this.ribbonPageGroup.AllowTextClipping = false;
             this.ribbonPageGroup.ItemLinks.Add(this.skinRibbonGalleryBarItem);
             this.ribbonPageGroup.Name = "ribbonPageGroup";
             this.ribbonPageGroup.ShowCaptionButton = false;
             this.ribbonPageGroup.Text = "Appearance";
-            //
+            // 
             // ribbonStatusBar
-            //
+            // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 568);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
             this.ribbonStatusBar.Size = new System.Drawing.Size(790, 31);
-            //
+            // 
             // dockManager
-            //
+            // 
             this.dockManager.Form = this;
             this.dockManager.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.dockPanel});
@@ -150,9 +150,9 @@
             "DevExpress.XtraBars.Ribbon.RibbonControl",
             "DevExpress.XtraBars.Navigation.OfficeNavigationBar",
             "DevExpress.XtraBars.Navigation.TileNavPane"});
-            //
+            // 
             // dockPanel
-            //
+            // 
             this.dockPanel.Controls.Add(this.dockPanel_Container);
             this.dockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel.ID = new System.Guid("a045df26-1503-4d9a-99c1-a531310af22b");
@@ -161,30 +161,30 @@
             this.dockPanel.OriginalSize = new System.Drawing.Size(200, 200);
             this.dockPanel.Size = new System.Drawing.Size(200, 425);
             this.dockPanel.Text = "Navigation";
-            //
+            // 
             // dockPanel_Container
-            //
+            // 
             this.dockPanel_Container.Controls.Add(this.accordionControl);
             this.dockPanel_Container.Location = new System.Drawing.Point(4, 23);
             this.dockPanel_Container.Name = "dockPanel_Container";
-            this.dockPanel_Container.Size = new System.Drawing.Size(192, 398);
+            this.dockPanel_Container.Size = new System.Drawing.Size(191, 398);
             this.dockPanel_Container.TabIndex = 0;
-            //
+            // 
             // accordionControl
-            //
+            // 
             this.accordionControl.AllowItemSelection = true;
             this.accordionControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.accordionControl.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.mainAccordionGroup});
             this.accordionControl.Location = new System.Drawing.Point(0, 0);
             this.accordionControl.Name = "accordionControl";
-            this.accordionControl.Size = new System.Drawing.Size(192, 398);
+            this.accordionControl.Size = new System.Drawing.Size(191, 398);
             this.accordionControl.TabIndex = 0;
             this.accordionControl.Text = "accordionControl";
             this.accordionControl.SelectedElementChanged += new DevExpress.XtraBars.Navigation.SelectedElementChangedEventHandler(this.accordionControl_SelectedElementChanged);
-            //
+            // 
             // mainAccordionGroup
-            //
+            // 
             this.mainAccordionGroup.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.employeesAccordionControlElement,
             this.customersAccordionControlElement});
@@ -192,34 +192,34 @@
             this.mainAccordionGroup.HeaderVisible = false;
             this.mainAccordionGroup.Name = "mainAccordionGroup";
             this.mainAccordionGroup.Text = "mainGroup";
-            //
+            // 
             // employeesAccordionControlElement
-            //
+            // 
             this.employeesAccordionControlElement.Name = "employeesAccordionControlElement";
             this.employeesAccordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.employeesAccordionControlElement.Text = "Employees";
-            //
+            // 
             // customersAccordionControlElement
-            //
+            // 
             this.customersAccordionControlElement.Name = "customersAccordionControlElement";
             this.customersAccordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.customersAccordionControlElement.Text = "Customers";
-            //
+            // 
             // tabbedView
-            //
+            // 
             this.tabbedView.RootContainer.Element = null;
             this.tabbedView.DocumentClosed += new DevExpress.XtraBars.Docking2010.Views.DocumentEventHandler(this.tabbedView_DocumentClosed);
-            //
+            // 
             // documentManager
-            //
+            // 
             this.documentManager.ContainerControl = this;
             this.documentManager.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
             this.documentManager.View = this.tabbedView;
             this.documentManager.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView});
-            //
+            // 
             // frmMain
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 599);
