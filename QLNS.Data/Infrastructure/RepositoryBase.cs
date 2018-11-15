@@ -11,7 +11,7 @@ namespace QLNS.Data.Infrastructure
     public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
-        private QLNSDbContext dataContext;
+        private MyQLNSDbContext dataContext;
         private readonly IDbSet<T> dbSet;
 
         protected IDbFactory DbFactory
@@ -20,7 +20,7 @@ namespace QLNS.Data.Infrastructure
             private set;
         }
 
-        protected QLNSDbContext DbContext
+        protected MyQLNSDbContext DbContext
         {
             get { return dataContext ?? (dataContext = DbFactory.Init()); }
         }

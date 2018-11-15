@@ -8,10 +8,10 @@ namespace QLNS.Data.Infrastructure
 {
     public class DbFactory : Disposable, IDbFactory
     {
-        private QLNSDbContext dbContext;
-        public QLNSDbContext Init()
+        private MyQLNSDbContext dbContext;
+        public MyQLNSDbContext Init()
         {
-            return dbContext ?? (dbContext = new QLNSDbContext());
+            return dbContext ?? (dbContext = new MyQLNSDbContext());
         }
         protected override void DisposeCore()
         {

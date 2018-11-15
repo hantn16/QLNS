@@ -9,14 +9,14 @@ namespace QLNS.Data.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IDbFactory dbFactory;
-        private QLNSDbContext dbContext;
+        private MyQLNSDbContext dbContext;
 
         public UnitOfWork(IDbFactory dbFactory)
         {
             this.dbFactory = dbFactory;
         }
 
-        public QLNSDbContext DbContext
+        public MyQLNSDbContext DbContext
         {
             get { return dbContext ?? (dbContext = dbFactory.Init()); }
         }
