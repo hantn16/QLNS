@@ -50,6 +50,9 @@
     <Reference Include="DevExpress.Utils.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -83,6 +86,7 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMainViewModel.cs" />
     <Compile Include="MyQLNSDbContextDataModel\IMyQLNSDbContextUnitOfWork.cs" />
     <Compile Include="MyQLNSDbContextDataModel\MyQLNSDbContextUnitOfWork.cs" />
     <Compile Include="MyQLNSDbContextDataModel\UnitOfWorkSource.cs" />
@@ -97,6 +101,45 @@
     <Compile Include="ViewModels\Position\PositionViewModel.cs" />
     <Compile Include="ViewModels\WorkingProcess\WorkingProcessCollectionViewModel.cs" />
     <Compile Include="ViewModels\WorkingProcess\WorkingProcessViewModel.cs" />
+    <Compile Include="Views\Department\DepartmentsEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Department\DepartmentsEditFormView.Designer.cs">
+      <DependentUpon>DepartmentsEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Department\DepartmentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Department\DepartmentsView.Designer.cs">
+      <DependentUpon>DepartmentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\EmployeesEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\EmployeesEditFormView.Designer.cs">
+      <DependentUpon>EmployeesEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee\EmployeesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Employee\EmployeesView.Designer.cs">
+      <DependentUpon>EmployeesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Position\PositionsEditFormView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Position\PositionsEditFormView.Designer.cs">
+      <DependentUpon>PositionsEditFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Position\PositionsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Position\PositionsView.Designer.cs">
+      <DependentUpon>PositionsView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,7 +150,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Department\DepartmentsEditFormView.resx">
+      <DependentUpon>DepartmentsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Department\DepartmentsView.resx">
+      <DependentUpon>DepartmentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employee\EmployeesEditFormView.resx">
+      <DependentUpon>EmployeesEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employee\EmployeesView.resx">
+      <DependentUpon>EmployeesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Position\PositionsEditFormView.resx">
+      <DependentUpon>PositionsEditFormView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Position\PositionsView.resx">
+      <DependentUpon>PositionsView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\QLNS.Model.Models.Department.datasource" />
+    <None Include="Properties\DataSources\QLNS.Model.Models.Employee.datasource" />
+    <None Include="Properties\DataSources\QLNS.Model.Models.Position.datasource" />
+    <None Include="Properties\DataSources\QLNS.UI.ViewModels.PositionViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -134,6 +199,9 @@
       <Project>{1bd11e4c-e792-4d33-85ab-47bd51d459f6}</Project>
       <Name>QLNS.Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\WorkingProcess\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

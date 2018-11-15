@@ -17,7 +17,7 @@ namespace QLNS.UI.ViewModels {
 		const string TablesGroup = "Tables";
 
 		const string ViewsGroup = "Views";
-	
+
         /// <summary>
         /// Creates a new instance of MyQLNSDbContextViewModel as a POCO view model.
         /// </summary>
