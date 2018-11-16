@@ -1,4 +1,5 @@
 ﻿using DevExpress.Utils.MVVM;
+using DevExpress.Utils.MVVM.Services;
 using QLNS.Data;
 using QLNS.UI.ViewModels;
 using System;
@@ -13,17 +14,22 @@ using System.Windows.Forms;
 
 namespace QLNS.UI
 {
-    public partial class frmMain : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public frmMain()
+        public FrmMain()
         {
             InitializeComponent();
             if (!DesignMode)
             {
                 InitBindings();
             }
+            mvvmContext1.RegisterService(DocumentManagerService.Create(tabbedView1));
+            ribbonControl1.Merge += ribbonControl1_Merge;
         }
-
+        void ribbonControl1_Merge(object sender, DevExpress.XtraBars.Ribbon.RibbonMergeEventArgs e)
+        {
+            ribbonControl1.SelectedPage = e.MergedChild.SelectedPage;
+        }
         void InitBindings()
         {
             MVVMContextFluentAPI<MyQLNSDbContextViewModel> fluentAPI = mvvmContext1.OfType<MyQLNSDbContextViewModel>();
