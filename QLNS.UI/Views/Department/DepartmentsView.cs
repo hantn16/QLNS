@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLNS.UI.ViewModels;
+using DevExpress.XtraGrid.Views.Base;
 
 namespace QLNS.UI.Views.Department
 {
@@ -18,9 +19,22 @@ namespace QLNS.UI.Views.Department
         public DepartmentsView()
         {
             InitializeComponent();
+            if(!DesignMode)
+            {
+                InitBindings();
+            }
+
+        }
+
+        private void InitBindings()
+        {
             var fluent = mvvmContext1.OfType<DepartmentCollectionViewModel>();
             fluent.SetBinding(gridView1, gView => gView.LoadingPanelVisible, x => x.IsLoading);
             fluent.SetBinding(gridControl1, gControl => gControl.DataSource, x => x.Entities);
+            fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
+                .SetBinding(x => x.SelectedEntity,
+                args => args.Row as QLNS.Model.Models.Department,
+                (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
         }
     }
 }

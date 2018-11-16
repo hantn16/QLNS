@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
+using QLNS.UI.ViewModels;
 
 namespace QLNS.UI.Views.Position
 {
@@ -17,6 +18,17 @@ namespace QLNS.UI.Views.Position
         public PositionsEditFormView()
         {
             InitializeComponent();
+            InitializeComponent();
+            if (!DesignMode)
+            {
+                InitBindings();
+            }
+        }
+
+        private void InitBindings()
+        {
+            var fluent = mvvmContext1.OfType<PositionViewModel>();
+            fluent.SetObjectDataSourceBinding(positionBindingSource, x => x.Entity, x => x.Update());
         }
     }
 }

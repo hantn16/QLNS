@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
+using QLNS.UI.ViewModels;
 
 namespace QLNS.UI.Views.Department
 {
@@ -17,6 +18,16 @@ namespace QLNS.UI.Views.Department
         public DepartmentsEditFormView()
         {
             InitializeComponent();
+            if (!DesignMode)
+            {
+                InitBindings();
+            }
+        }
+
+        private void InitBindings()
+        {
+            var fluent = mvvmContext1.OfType<DepartmentViewModel>();
+            fluent.SetObjectDataSourceBinding(departmentBindingSource, x => x.Entity, x => x.Update());
         }
     }
 }

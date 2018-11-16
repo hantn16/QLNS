@@ -34,8 +34,8 @@ namespace QLNS.UI
         {
             MVVMContextFluentAPI<MyQLNSDbContextViewModel> fluentAPI = mvvmContext1.OfType<MyQLNSDbContextViewModel>();
             fluentAPI.BindCommand(biDepartments, (context, module) => context.Show(module), context => context.Modules[0]);
-            fluentAPI.BindCommand(biPositions, (context, module) => context.Show(module), context => context.Modules[1]);
-            fluentAPI.BindCommand(biEmployees, (context, module) => context.Show(module), context => context.Modules[2]);
+            fluentAPI.BindCommand(biPositions, (context, module) => context.Show(module), context => context.Modules[2]);
+            fluentAPI.BindCommand(biEmployees, (context, module) => context.Show(module), context => context.Modules[1]);
             fluentAPI.WithEvent(this, "Load").EventToCommand(context => context.OnLoaded(null), context => context.DefaultModule);
         }
     }
