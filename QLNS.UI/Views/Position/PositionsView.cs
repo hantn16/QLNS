@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
+using QLNS.UI.ViewModels;
 
 namespace QLNS.UI.Views.Position
 {
@@ -17,6 +18,9 @@ namespace QLNS.UI.Views.Position
         public PositionsView()
         {
             InitializeComponent();
+            var fluent = mvvmContext1.OfType<PositionCollectionViewModel>();
+            fluent.SetBinding(gridView1, gView => gView.LoadingPanelVisible, x => x.IsLoading);
+            fluent.SetBinding(gridControl1, gControl => gControl.DataSource, x => x.Entities);
         }
     }
 }
