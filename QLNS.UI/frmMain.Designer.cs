@@ -39,6 +39,7 @@
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.biLogout = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -52,9 +53,10 @@
             this.ribbonControl1.ExpandCollapseItem,
             this.biDepartments,
             this.biPositions,
-            this.biEmployees});
+            this.biEmployees,
+            this.biLogout});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 4;
+            this.ribbonControl1.MaxItemId = 5;
             this.ribbonControl1.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -97,6 +99,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.biDepartments);
             this.ribbonPageGroup1.ItemLinks.Add(this.biPositions);
             this.ribbonPageGroup1.ItemLinks.Add(this.biEmployees);
+            this.ribbonPageGroup1.ItemLinks.Add(this.biLogout);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // mvvmContext1
@@ -118,6 +121,14 @@
             this.documentManager1.View = this.tabbedView1;
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
+            // 
+            // biLogout
+            // 
+            this.biLogout.Caption = "Logout";
+            this.biLogout.Id = 4;
+            this.biLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("biLogout.ImageOptions.Image")));
+            this.biLogout.Name = "biLogout";
+            this.biLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // FrmMain
             // 
@@ -149,5 +160,6 @@
         private DevExpress.XtraBars.BarButtonItem biEmployees;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
+        private DevExpress.XtraBars.BarButtonItem biLogout;
     }
 }

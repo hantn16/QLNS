@@ -1,4 +1,5 @@
-﻿using DevExpress.Utils.MVVM;
+﻿using DevExpress.Mvvm;
+using DevExpress.Utils.MVVM;
 using DevExpress.Utils.MVVM.Services;
 using QLNS.Data;
 using QLNS.UI.ViewModels;
@@ -41,11 +42,22 @@ namespace QLNS.UI
 
             fluentAPI.SetTrigger(x => x.State, (state) =>
             {
-                if (state == AppState.Autorized)
+                if (state == AppState.Authorized)
                     Opacity = 1; /*Show Main Form*/
                 if (state == AppState.ExitQueued)
                     Close(); // exit the app; 
             });
+            fluentAPI.WithEvent<FormClosingEventArgs>(this, "FormClosing")
+                .EventToCommand(x => x.OnClosing(null), new Func<CancelEventArgs, object>((args) => args));
+            Messenger.Default.Register<string>(this, OnUserNameMessage);
+            fluentAPI.BindCommand(biLogout, x => x.Logout());
+        }
+        void OnUserNameMessage(string userName)
+        {
+            if (string.IsNullOrEmpty(userName))
+                this.Text = "Expenses Application";
+            else
+                this.Text = "Expenses Application - (" + userName + ")";
         }
     }
 }

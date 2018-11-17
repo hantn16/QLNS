@@ -187,6 +187,7 @@
     <None Include="Properties\DataSources\QLNS.Model.Models.Employee.datasource" />
     <None Include="Properties\DataSources\QLNS.Model.Models.Login.datasource" />
     <None Include="Properties\DataSources\QLNS.Model.Models.Position.datasource" />
+    <None Include="Properties\DataSources\QLNS.Model.Models.User.datasource" />
     <None Include="Properties\DataSources\QLNS.UI.ViewModels.PositionViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

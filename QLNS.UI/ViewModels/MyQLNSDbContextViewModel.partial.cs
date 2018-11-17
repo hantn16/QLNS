@@ -4,6 +4,7 @@ using QLNS.UI.MyQLNSDbContextDataModel;
 using QLNS.UI.ViewModels.Login;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,7 +50,7 @@ namespace QLNS.UI.ViewModels
             else
             {
                 if (loginViewModel.IsCurrentUserCredentialsValid)
-                    State = AppState.Autorized;
+                    State = AppState.Authorized;
                 else
                     Login();
             }
@@ -57,21 +58,36 @@ namespace QLNS.UI.ViewModels
         protected void OnStateChanged()
         {
             this.RaiseCanExecuteChanged(x => x.Logout());
-            if (State == AppState.Autorized)
+            if (State == AppState.Authorized)
                 Messenger.Default.Send<string>(loginViewModel.CurrentUser.UserName);
             else
                 Messenger.Default.Send<string>(string.Empty);
         }
 
-        private void Logout()
+        public void Logout()
         {
-            throw new NotImplementedException();
+            State = AppState.ExitQueued;
+            System.Diagnostics.Process.Start(System.Windows.Forms.Application.ExecutablePath);
+        }
+
+        public bool CanLogout()
+        {
+            return State == AppState.Authorized;
+        }
+        public override void OnClosing(CancelEventArgs cancelEventArgs)
+        {
+            base.OnClosing(cancelEventArgs);
+            if (!cancelEventArgs.Cancel)
+            {
+                if (State == AppState.Authorized && MessageService.ShowMessage("Do you really want to close the application?", "Confirm", MessageButton.YesNo) == MessageResult.No)
+                    cancelEventArgs.Cancel = true;
+            }
         }
     }
     public enum AppState
     {
-        NotAutorized,
-        Autorized,
+        NotAuthorized,
+        Authorized,
         ExitQueued
     }
 }

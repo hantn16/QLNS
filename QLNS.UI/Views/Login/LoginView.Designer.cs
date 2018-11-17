@@ -30,31 +30,31 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.UserNameLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.ItemForUserName = new DevExpress.XtraLayout.LayoutControlItem();
             this.PasswordTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForPassword = new DevExpress.XtraLayout.LayoutControlItem();
-            this.UserNameTextEdit = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserNameLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUserName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserNameTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
             // 
+            this.dataLayoutControl1.Controls.Add(this.UserNameLookUpEdit);
             this.dataLayoutControl1.Controls.Add(this.PasswordTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.UserNameTextEdit);
-            this.dataLayoutControl1.DataSource = this.loginBindingSource;
+            this.dataLayoutControl1.DataSource = this.userBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -63,9 +63,9 @@
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
-            // loginBindingSource
+            // userBindingSource
             // 
-            this.loginBindingSource.DataSource = typeof(QLNS.Model.Models.User);
+            this.userBindingSource.DataSource = typeof(QLNS.Model.Models.User);
             // 
             // layoutControlGroup1
             // 
@@ -92,10 +92,23 @@
             // mvvmContext1
             // 
             this.mvvmContext1.ContainerControl = this;
+            this.mvvmContext1.ViewModelType = typeof(QLNS.UI.ViewModels.Login.LoginViewModel);
+            // 
+            // UserNameLookUpEdit
+            // 
+            this.UserNameLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "UserName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.UserNameLookUpEdit.Location = new System.Drawing.Point(87, 12);
+            this.UserNameLookUpEdit.Name = "UserNameLookUpEdit";
+            this.UserNameLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.UserNameLookUpEdit.Properties.NullText = "";
+            this.UserNameLookUpEdit.Size = new System.Drawing.Size(251, 20);
+            this.UserNameLookUpEdit.StyleController = this.dataLayoutControl1;
+            this.UserNameLookUpEdit.TabIndex = 4;
             // 
             // ItemForUserName
             // 
-            this.ItemForUserName.Control = this.UserNameTextEdit;
+            this.ItemForUserName.Control = this.UserNameLookUpEdit;
             this.ItemForUserName.Location = new System.Drawing.Point(0, 0);
             this.ItemForUserName.Name = "ItemForUserName";
             this.ItemForUserName.Size = new System.Drawing.Size(330, 24);
@@ -103,7 +116,7 @@
             // 
             // PasswordTextEdit
             // 
-            this.PasswordTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.loginBindingSource, "Password", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.PasswordTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userBindingSource, "Password", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.PasswordTextEdit.Location = new System.Drawing.Point(87, 36);
             this.PasswordTextEdit.Name = "PasswordTextEdit";
             this.PasswordTextEdit.Size = new System.Drawing.Size(251, 20);
@@ -118,18 +131,6 @@
             this.ItemForPassword.Size = new System.Drawing.Size(330, 218);
             this.ItemForPassword.TextSize = new System.Drawing.Size(72, 13);
             // 
-            // UserNameTextEdit
-            // 
-            this.UserNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.loginBindingSource, "UserName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.UserNameTextEdit.Location = new System.Drawing.Point(87, 12);
-            this.UserNameTextEdit.Name = "UserNameTextEdit";
-            this.UserNameTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.UserNameTextEdit.Properties.NullText = "";
-            this.UserNameTextEdit.Size = new System.Drawing.Size(251, 20);
-            this.UserNameTextEdit.StyleController = this.dataLayoutControl1;
-            this.UserNameTextEdit.TabIndex = 4;
-            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -139,14 +140,14 @@
             this.Size = new System.Drawing.Size(350, 262);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UserNameLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForUserName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.UserNameTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,10 +157,10 @@
         private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
-        private System.Windows.Forms.BindingSource loginBindingSource;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private DevExpress.XtraEditors.LookUpEdit UserNameLookUpEdit;
         private DevExpress.XtraEditors.TextEdit PasswordTextEdit;
-        private DevExpress.XtraEditors.LookUpEdit UserNameTextEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForUserName;
         private DevExpress.XtraLayout.LayoutControlItem ItemForPassword;
     }

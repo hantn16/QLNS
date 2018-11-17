@@ -21,12 +21,9 @@ namespace QLNS.UI.Views.Login
         {
             base.OnLoad(e);
             var fluentAPI = mvvmContext1.OfType<LoginViewModel>();
-            fluentAPI.SetObjectDataSourceBinding(loginBindingSource,
-                x => x.CurrentUser, x => x.Update());
-
-            foreach (string item in mvvmContext1.GetViewModel<LoginViewModel>().LookUpUsers)
-                UserNameTextEdit.Properties.Items.Add(item);
-                fluentAPI.ViewModel.Init();
+            fluentAPI.SetObjectDataSourceBinding(userBindingSource, x => x.CurrentUser, x => x.Update());
+            UserNameLookUpEdit.Properties.DataSource = mvvmContext1.GetViewModel<LoginViewModel>().LookUpUsers.ToList();
+            fluentAPI.ViewModel.Init();
         }
     }
 }
