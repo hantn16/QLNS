@@ -19,6 +19,7 @@ namespace QLNS.UI
         public FrmMain()
         {
             InitializeComponent();
+            this.Opacity = 0;
             if (!DesignMode)
             {
                 InitBindings();
@@ -37,6 +38,14 @@ namespace QLNS.UI
             fluentAPI.BindCommand(biPositions, (context, module) => context.Show(module), context => context.Modules[2]);
             fluentAPI.BindCommand(biEmployees, (context, module) => context.Show(module), context => context.Modules[1]);
             fluentAPI.WithEvent(this, "Load").EventToCommand(context => context.OnLoaded(null), context => context.DefaultModule);
+
+            fluentAPI.SetTrigger(x => x.State, (state) =>
+            {
+                if (state == AppState.Autorized)
+                    Opacity = 1; /*Show Main Form*/
+                if (state == AppState.ExitQueued)
+                    Close(); // exit the app; 
+            });
         }
     }
 }

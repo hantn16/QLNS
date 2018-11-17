@@ -10,20 +10,14 @@ namespace QLNS.Model.Models
 {
     public class User
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public long Id { get; set; }
 
-        [MinLength(4)]
-        [MaxLength(16)]
         [Display(Name = "Tên đăng nhập")]
         public string UserName { get; set; }
 
         [Display(Name = "Mật khẩu")]
-        [MinLength(6)]
         public string Password { get; set; }
     }
-    static class CredentialsSource
+    public static class CredentialsSource
     {
         static System.Collections.Hashtable credentials;
         static CredentialsSource()
@@ -33,15 +27,15 @@ namespace QLNS.Model.Models
             credentials.Add("hantn", GetHash("123456"));
             credentials.Add("Admin", GetHash("admin1"));
         }
-        internal static bool Check(string user, string pwd)
+        public static bool Check(string login, string pwd)
         {
-            return object.Equals(credentials[user], GetHash(pwd));
+            return object.Equals(credentials[login], GetHash(pwd));
         }
         static object GetHash(string password)
         {
             return password;
         }
-        internal static System.Collections.Generic.IEnumerable<string> GetUserNames()
+        public static System.Collections.Generic.IEnumerable<string> GetUserNames()
         {
             foreach (string item in credentials.Keys)
                 yield return item;

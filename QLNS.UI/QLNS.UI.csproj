@@ -66,6 +66,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +76,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\CollectionViewModel.cs" />
@@ -87,7 +90,6 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainViewModel.cs" />
     <Compile Include="MyQLNSDbContextDataModel\IMyQLNSDbContextUnitOfWork.cs" />
     <Compile Include="MyQLNSDbContextDataModel\MyQLNSDbContextUnitOfWork.cs" />
     <Compile Include="MyQLNSDbContextDataModel\UnitOfWorkSource.cs" />
@@ -97,7 +99,9 @@
     <Compile Include="ViewModels\Department\DepartmentViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeeCollectionViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Login\LoginViewModel.cs" />
     <Compile Include="ViewModels\MyQLNSDbContextViewModel.cs" />
+    <Compile Include="ViewModels\MyQLNSDbContextViewModel.partial.cs" />
     <Compile Include="ViewModels\Position\PositionCollectionViewModel.cs" />
     <Compile Include="ViewModels\Position\PositionViewModel.cs" />
     <Compile Include="ViewModels\WorkingProcess\WorkingProcessCollectionViewModel.cs" />
@@ -125,6 +129,12 @@
     </Compile>
     <Compile Include="Views\Employee\EmployeesView.Designer.cs">
       <DependentUpon>EmployeesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login\LoginView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Login\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Position\PositionsEditFormView.cs">
       <SubType>UserControl</SubType>
@@ -163,6 +173,9 @@
     <EmbeddedResource Include="Views\Employee\EmployeesView.resx">
       <DependentUpon>EmployeesView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Position\PositionsEditFormView.resx">
       <DependentUpon>PositionsEditFormView.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +185,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\QLNS.Model.Models.Department.datasource" />
     <None Include="Properties\DataSources\QLNS.Model.Models.Employee.datasource" />
+    <None Include="Properties\DataSources\QLNS.Model.Models.Login.datasource" />
     <None Include="Properties\DataSources\QLNS.Model.Models.Position.datasource" />
     <None Include="Properties\DataSources\QLNS.UI.ViewModels.PositionViewModel.datasource" />
     <None Include="Properties\Settings.settings">

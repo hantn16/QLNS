@@ -30,9 +30,9 @@ namespace QLNS.UI.ViewModels {
         /// Initializes a new instance of the MyQLNSDbContextViewModel class.
         /// This constructor is declared protected to avoid undesired instantiation of the MyQLNSDbContextViewModel type without the POCO proxy factory.
         /// </summary>
-        protected MyQLNSDbContextViewModel()
-		    : base(UnitOfWorkSource.GetUnitOfWorkFactory()) {
-        }
+      //  protected MyQLNSDbContextViewModel()
+		    //: base(UnitOfWorkSource.GetUnitOfWorkFactory()) {
+      //  }
 
         protected override MyQLNSDbContextModuleDescription[] CreateModules() {
 			return new MyQLNSDbContextModuleDescription[] {

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLNS.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
+using System.Data.Entity;
 
 namespace QLNS.UI.Views.Department
 {
@@ -19,11 +20,10 @@ namespace QLNS.UI.Views.Department
         public DepartmentsView()
         {
             InitializeComponent();
-            if(!DesignMode)
+            if (!DesignMode)
             {
                 InitBindings();
             }
-
         }
 
         private void InitBindings()
