@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201811141332574_InitialMigration.Designer.cs">
       <DependentUpon>201811141332574_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811190210259_Refix Auditable abstract class.cs" />
+    <Compile Include="Migrations\201811190210259_Refix Auditable abstract class.Designer.cs">
+      <DependentUpon>201811190210259_Refix Auditable abstract class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyQLNSDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +75,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811141332574_InitialMigration.resx">
       <DependentUpon>201811141332574_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811190210259_Refix Auditable abstract class.resx">
+      <DependentUpon>201811190210259_Refix Auditable abstract class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

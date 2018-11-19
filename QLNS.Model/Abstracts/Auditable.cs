@@ -19,9 +19,5 @@ namespace QLNS.Model.Abstracts
 
         [Display(Name = "Người sửa")]
         public string ModifiedBy { get; set; }
-
-        public string MetaKeyword { get; set; }
-
-        public string MetaDescription { get; set; }
     }
 }

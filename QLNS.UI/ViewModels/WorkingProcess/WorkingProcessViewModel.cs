@@ -32,7 +32,7 @@ namespace QLNS.UI.ViewModels {
         /// </summary>
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
         protected WorkingProcessViewModel(IUnitOfWorkFactory<IMyQLNSDbContextUnitOfWork> unitOfWorkFactory = null)
-            : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.WorkingProcesses, x => x.MetaDescription) {
+            : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.WorkingProcesses) {
                 }
 
 

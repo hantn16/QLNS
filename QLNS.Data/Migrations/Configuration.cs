@@ -18,7 +18,15 @@
             //  This method will be called after migrating to the latest version.
             using (var db = new MyQLNSDbContext())
             {
-                Department dp = new Department() { Name = "Bộ phận văn phòng", Alias = "bo-phan-van-phong" };
+                Department dp = new Department() {
+                    Name = "Bộ phận văn phòng",
+                    Alias = "bo-phan-van-phong",
+                    Status = true,
+                    CreatedBy = "admin",
+                    CreatedDate = DateTime.Now,
+                    ModifiedBy = null,
+                    ModifiedDate = null
+                };
                 db.Departments.Add(dp);
                 db.SaveChanges();
             }
