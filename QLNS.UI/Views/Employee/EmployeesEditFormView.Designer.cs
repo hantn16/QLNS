@@ -45,34 +45,35 @@
             this.NameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DateOfBirthDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.GenderCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.PhoneTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.IDCardNoTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.DateIssuedDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.PlaceIssuedTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.JoinDateDateEdit = new DevExpress.XtraEditors.DateEdit();
-            this.DepartmentIdComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.LeaderIdComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.PositionIdComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.StatusCheckEdit = new DevExpress.XtraEditors.CheckEdit();
+            this.GenderCheckEdit = new DevExpress.XtraEditors.RadioGroup();
+            this.DepartmentIdComboBoxEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PositionIdComboBoxEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LeaderIdComboBoxEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForName = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForDateOfBirth = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForGender = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForPhone = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForIDCardNo = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForDateIssued = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForPlaceIssued = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForJoinDate = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForStatus = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForDateOfBirth = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForDateIssued = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForPositionId = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForPlaceIssued = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForDepartmentId = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForLeaderId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForPositionId = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForStatus = new DevExpress.XtraLayout.LayoutControlItem();
-            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ItemForPhone = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
@@ -81,7 +82,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateOfBirthDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateOfBirthDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenderCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDCardNoTextEdit.Properties)).BeginInit();
@@ -90,27 +90,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.PlaceIssuedTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JoinDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JoinDateDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentIdComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeaderIdComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PositionIdComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderCheckEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentIdComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionIdComboBoxEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeaderIdComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateOfBirth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGender)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIDCardNo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateIssued)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPlaceIssued)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForJoinDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateOfBirth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateIssued)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPositionId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPlaceIssued)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartmentId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLeaderId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPositionId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // mvvmContext1
@@ -227,18 +229,17 @@
             this.dataLayoutControl1.AllowGeneratingCollectionProperties = DevExpress.Utils.DefaultBoolean.False;
             this.dataLayoutControl1.Controls.Add(this.NameTextEdit);
             this.dataLayoutControl1.Controls.Add(this.DateOfBirthDateEdit);
-            this.dataLayoutControl1.Controls.Add(this.GenderCheckEdit);
             this.dataLayoutControl1.Controls.Add(this.PhoneTextEdit);
             this.dataLayoutControl1.Controls.Add(this.EmailTextEdit);
             this.dataLayoutControl1.Controls.Add(this.IDCardNoTextEdit);
             this.dataLayoutControl1.Controls.Add(this.DateIssuedDateEdit);
             this.dataLayoutControl1.Controls.Add(this.PlaceIssuedTextEdit);
             this.dataLayoutControl1.Controls.Add(this.JoinDateDateEdit);
-            this.dataLayoutControl1.Controls.Add(this.DepartmentIdComboBoxEdit);
-            this.dataLayoutControl1.Controls.Add(this.LeaderIdComboBoxEdit);
-            this.dataLayoutControl1.Controls.Add(this.PositionIdComboBoxEdit);
             this.dataLayoutControl1.Controls.Add(this.StatusCheckEdit);
-            this.dataLayoutControl1.DataSource = this.employeeBindingSource;
+            this.dataLayoutControl1.Controls.Add(this.GenderCheckEdit);
+            this.dataLayoutControl1.Controls.Add(this.DepartmentIdComboBoxEdit);
+            this.dataLayoutControl1.Controls.Add(this.PositionIdComboBoxEdit);
+            this.dataLayoutControl1.Controls.Add(this.LeaderIdComboBoxEdit);
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 141);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -253,7 +254,7 @@
             this.NameTextEdit.Location = new System.Drawing.Point(85, 12);
             this.NameTextEdit.MenuManager = this.ribbonControl1;
             this.NameTextEdit.Name = "NameTextEdit";
-            this.NameTextEdit.Size = new System.Drawing.Size(542, 20);
+            this.NameTextEdit.Size = new System.Drawing.Size(241, 20);
             this.NameTextEdit.StyleController = this.dataLayoutControl1;
             this.NameTextEdit.TabIndex = 4;
             // 
@@ -265,56 +266,47 @@
             // 
             this.DateOfBirthDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "DateOfBirth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DateOfBirthDateEdit.EditValue = null;
-            this.DateOfBirthDateEdit.Location = new System.Drawing.Point(85, 36);
+            this.DateOfBirthDateEdit.Location = new System.Drawing.Point(260, 36);
             this.DateOfBirthDateEdit.MenuManager = this.ribbonControl1;
             this.DateOfBirthDateEdit.Name = "DateOfBirthDateEdit";
             this.DateOfBirthDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateOfBirthDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateOfBirthDateEdit.Size = new System.Drawing.Size(542, 20);
+            this.DateOfBirthDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
+            this.DateOfBirthDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.DateOfBirthDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.DateOfBirthDateEdit.Size = new System.Drawing.Size(102, 20);
             this.DateOfBirthDateEdit.StyleController = this.dataLayoutControl1;
             this.DateOfBirthDateEdit.TabIndex = 5;
-            // 
-            // GenderCheckEdit
-            // 
-            this.GenderCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "Gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GenderCheckEdit.Location = new System.Drawing.Point(12, 60);
-            this.GenderCheckEdit.MenuManager = this.ribbonControl1;
-            this.GenderCheckEdit.Name = "GenderCheckEdit";
-            this.GenderCheckEdit.Properties.Caption = "checkEdit1";
-            this.GenderCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.GenderCheckEdit.Size = new System.Drawing.Size(615, 19);
-            this.GenderCheckEdit.StyleController = this.dataLayoutControl1;
-            this.GenderCheckEdit.TabIndex = 6;
             // 
             // PhoneTextEdit
             // 
             this.PhoneTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "Phone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PhoneTextEdit.Location = new System.Drawing.Point(85, 83);
+            this.PhoneTextEdit.Location = new System.Drawing.Point(439, 36);
             this.PhoneTextEdit.MenuManager = this.ribbonControl1;
             this.PhoneTextEdit.Name = "PhoneTextEdit";
-            this.PhoneTextEdit.Size = new System.Drawing.Size(542, 20);
+            this.PhoneTextEdit.Size = new System.Drawing.Size(205, 20);
             this.PhoneTextEdit.StyleController = this.dataLayoutControl1;
             this.PhoneTextEdit.TabIndex = 7;
             // 
             // EmailTextEdit
             // 
             this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.EmailTextEdit.Location = new System.Drawing.Point(85, 107);
+            this.EmailTextEdit.Location = new System.Drawing.Point(85, 63);
             this.EmailTextEdit.MenuManager = this.ribbonControl1;
             this.EmailTextEdit.Name = "EmailTextEdit";
-            this.EmailTextEdit.Size = new System.Drawing.Size(542, 20);
+            this.EmailTextEdit.Size = new System.Drawing.Size(559, 20);
             this.EmailTextEdit.StyleController = this.dataLayoutControl1;
             this.EmailTextEdit.TabIndex = 8;
             // 
             // IDCardNoTextEdit
             // 
             this.IDCardNoTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "IDCardNo", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.IDCardNoTextEdit.Location = new System.Drawing.Point(85, 131);
+            this.IDCardNoTextEdit.Location = new System.Drawing.Point(85, 87);
             this.IDCardNoTextEdit.MenuManager = this.ribbonControl1;
             this.IDCardNoTextEdit.Name = "IDCardNoTextEdit";
-            this.IDCardNoTextEdit.Size = new System.Drawing.Size(542, 20);
+            this.IDCardNoTextEdit.Size = new System.Drawing.Size(98, 20);
             this.IDCardNoTextEdit.StyleController = this.dataLayoutControl1;
             this.IDCardNoTextEdit.TabIndex = 9;
             // 
@@ -322,24 +314,28 @@
             // 
             this.DateIssuedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "DateIssued", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DateIssuedDateEdit.EditValue = null;
-            this.DateIssuedDateEdit.Location = new System.Drawing.Point(85, 155);
+            this.DateIssuedDateEdit.Location = new System.Drawing.Point(260, 87);
             this.DateIssuedDateEdit.MenuManager = this.ribbonControl1;
             this.DateIssuedDateEdit.Name = "DateIssuedDateEdit";
             this.DateIssuedDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateIssuedDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DateIssuedDateEdit.Size = new System.Drawing.Size(542, 20);
+            this.DateIssuedDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
+            this.DateIssuedDateEdit.Properties.Mask.BeepOnError = true;
+            this.DateIssuedDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.DateIssuedDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.DateIssuedDateEdit.Size = new System.Drawing.Size(102, 20);
             this.DateIssuedDateEdit.StyleController = this.dataLayoutControl1;
             this.DateIssuedDateEdit.TabIndex = 10;
             // 
             // PlaceIssuedTextEdit
             // 
             this.PlaceIssuedTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "PlaceIssued", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PlaceIssuedTextEdit.Location = new System.Drawing.Point(85, 179);
+            this.PlaceIssuedTextEdit.Location = new System.Drawing.Point(439, 87);
             this.PlaceIssuedTextEdit.MenuManager = this.ribbonControl1;
             this.PlaceIssuedTextEdit.Name = "PlaceIssuedTextEdit";
-            this.PlaceIssuedTextEdit.Size = new System.Drawing.Size(542, 20);
+            this.PlaceIssuedTextEdit.Size = new System.Drawing.Size(205, 20);
             this.PlaceIssuedTextEdit.StyleController = this.dataLayoutControl1;
             this.PlaceIssuedTextEdit.TabIndex = 11;
             // 
@@ -347,70 +343,118 @@
             // 
             this.JoinDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "JoinDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.JoinDateDateEdit.EditValue = null;
-            this.JoinDateDateEdit.Location = new System.Drawing.Point(85, 203);
+            this.JoinDateDateEdit.Location = new System.Drawing.Point(85, 111);
             this.JoinDateDateEdit.MenuManager = this.ribbonControl1;
             this.JoinDateDateEdit.Name = "JoinDateDateEdit";
             this.JoinDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.JoinDateDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.JoinDateDateEdit.Size = new System.Drawing.Size(542, 20);
+            this.JoinDateDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
+            this.JoinDateDateEdit.Properties.Mask.BeepOnError = true;
+            this.JoinDateDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.JoinDateDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
+            this.JoinDateDateEdit.Size = new System.Drawing.Size(204, 20);
             this.JoinDateDateEdit.StyleController = this.dataLayoutControl1;
             this.JoinDateDateEdit.TabIndex = 12;
+            // 
+            // StatusCheckEdit
+            // 
+            this.StatusCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "Status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.StatusCheckEdit.Location = new System.Drawing.Point(12, 159);
+            this.StatusCheckEdit.MenuManager = this.ribbonControl1;
+            this.StatusCheckEdit.Name = "StatusCheckEdit";
+            this.StatusCheckEdit.Properties.Caption = "Active";
+            this.StatusCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.StatusCheckEdit.Size = new System.Drawing.Size(632, 19);
+            this.StatusCheckEdit.StyleController = this.dataLayoutControl1;
+            this.StatusCheckEdit.TabIndex = 16;
+            // 
+            // GenderCheckEdit
+            // 
+            this.GenderCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "Gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.GenderCheckEdit.EditValue = false;
+            this.GenderCheckEdit.Location = new System.Drawing.Point(85, 36);
+            this.GenderCheckEdit.MenuManager = this.ribbonControl1;
+            this.GenderCheckEdit.Name = "GenderCheckEdit";
+            this.GenderCheckEdit.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.GenderCheckEdit.Properties.Columns = 2;
+            this.GenderCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
+            this.GenderCheckEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(true, "Nam"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(false, "Nữ")});
+            this.GenderCheckEdit.Size = new System.Drawing.Size(98, 23);
+            this.GenderCheckEdit.StyleController = this.dataLayoutControl1;
+            this.GenderCheckEdit.TabIndex = 6;
             // 
             // DepartmentIdComboBoxEdit
             // 
             this.DepartmentIdComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "DepartmentId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DepartmentIdComboBoxEdit.Location = new System.Drawing.Point(85, 227);
+            this.DepartmentIdComboBoxEdit.Location = new System.Drawing.Point(85, 135);
             this.DepartmentIdComboBoxEdit.MenuManager = this.ribbonControl1;
             this.DepartmentIdComboBoxEdit.Name = "DepartmentIdComboBoxEdit";
             this.DepartmentIdComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.DepartmentIdComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.DepartmentIdComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DepartmentIdComboBoxEdit.Size = new System.Drawing.Size(542, 20);
+            this.DepartmentIdComboBoxEdit.Properties.DataSource = this.departmentsBindingSource;
+            this.DepartmentIdComboBoxEdit.Properties.DisplayMember = "Name";
+            this.DepartmentIdComboBoxEdit.Properties.NullText = "";
+            this.DepartmentIdComboBoxEdit.Properties.PopupSizeable = false;
+            this.DepartmentIdComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.DepartmentIdComboBoxEdit.Properties.ValueMember = "Id";
+            this.DepartmentIdComboBoxEdit.Size = new System.Drawing.Size(204, 20);
             this.DepartmentIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.DepartmentIdComboBoxEdit.TabIndex = 13;
             // 
-            // LeaderIdComboBoxEdit
+            // departmentsBindingSource
             // 
-            this.LeaderIdComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "LeaderId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.LeaderIdComboBoxEdit.Location = new System.Drawing.Point(85, 251);
-            this.LeaderIdComboBoxEdit.MenuManager = this.ribbonControl1;
-            this.LeaderIdComboBoxEdit.Name = "LeaderIdComboBoxEdit";
-            this.LeaderIdComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.LeaderIdComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.LeaderIdComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.LeaderIdComboBoxEdit.Size = new System.Drawing.Size(542, 20);
-            this.LeaderIdComboBoxEdit.StyleController = this.dataLayoutControl1;
-            this.LeaderIdComboBoxEdit.TabIndex = 14;
+            this.departmentsBindingSource.DataSource = typeof(QLNS.Model.Models.Department);
             // 
             // PositionIdComboBoxEdit
             // 
             this.PositionIdComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "PositionId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PositionIdComboBoxEdit.Location = new System.Drawing.Point(85, 275);
+            this.PositionIdComboBoxEdit.Location = new System.Drawing.Point(366, 111);
             this.PositionIdComboBoxEdit.MenuManager = this.ribbonControl1;
             this.PositionIdComboBoxEdit.Name = "PositionIdComboBoxEdit";
             this.PositionIdComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.PositionIdComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.PositionIdComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.PositionIdComboBoxEdit.Size = new System.Drawing.Size(542, 20);
+            this.PositionIdComboBoxEdit.Properties.DataSource = this.positionBindingSource;
+            this.PositionIdComboBoxEdit.Properties.DisplayMember = "Name";
+            this.PositionIdComboBoxEdit.Properties.NullText = "";
+            this.PositionIdComboBoxEdit.Properties.PopupSizeable = false;
+            this.PositionIdComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.PositionIdComboBoxEdit.Properties.ValueMember = "Id";
+            this.PositionIdComboBoxEdit.Size = new System.Drawing.Size(278, 20);
             this.PositionIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.PositionIdComboBoxEdit.TabIndex = 15;
             // 
-            // StatusCheckEdit
+            // positionBindingSource
             // 
-            this.StatusCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "Status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.StatusCheckEdit.Location = new System.Drawing.Point(12, 299);
-            this.StatusCheckEdit.MenuManager = this.ribbonControl1;
-            this.StatusCheckEdit.Name = "StatusCheckEdit";
-            this.StatusCheckEdit.Properties.Caption = "checkEdit1";
-            this.StatusCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
-            this.StatusCheckEdit.Size = new System.Drawing.Size(615, 19);
-            this.StatusCheckEdit.StyleController = this.dataLayoutControl1;
-            this.StatusCheckEdit.TabIndex = 16;
+            this.positionBindingSource.DataSource = typeof(QLNS.Model.Models.Position);
+            // 
+            // LeaderIdComboBoxEdit
+            // 
+            this.LeaderIdComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "LeaderId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.LeaderIdComboBoxEdit.Location = new System.Drawing.Point(366, 135);
+            this.LeaderIdComboBoxEdit.MenuManager = this.ribbonControl1;
+            this.LeaderIdComboBoxEdit.Name = "LeaderIdComboBoxEdit";
+            this.LeaderIdComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.LeaderIdComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.LeaderIdComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LeaderIdComboBoxEdit.Properties.DataSource = this.employeeBindingSource;
+            this.LeaderIdComboBoxEdit.Properties.DisplayMember = "Name";
+            this.LeaderIdComboBoxEdit.Properties.NullText = "";
+            this.LeaderIdComboBoxEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
+            this.LeaderIdComboBoxEdit.Properties.PopupSizeable = false;
+            this.LeaderIdComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.LeaderIdComboBoxEdit.Properties.ValueMember = "Id";
+            this.LeaderIdComboBoxEdit.Size = new System.Drawing.Size(278, 20);
+            this.LeaderIdComboBoxEdit.StyleController = this.dataLayoutControl1;
+            this.LeaderIdComboBoxEdit.TabIndex = 14;
             // 
             // layoutControlGroup1
             // 
@@ -420,7 +464,7 @@
             this.layoutControlGroup2});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(639, 330);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(656, 289);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -429,147 +473,147 @@
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.ItemForName,
-            this.ItemForDateOfBirth,
             this.ItemForGender,
-            this.ItemForPhone,
-            this.ItemForEmail,
             this.ItemForIDCardNo,
-            this.ItemForDateIssued,
-            this.ItemForPlaceIssued,
             this.ItemForJoinDate,
+            this.ItemForStatus,
+            this.ItemForDateOfBirth,
+            this.ItemForDateIssued,
+            this.ItemForPositionId,
+            this.ItemForEmail,
+            this.ItemForPlaceIssued,
             this.ItemForDepartmentId,
             this.ItemForLeaderId,
-            this.ItemForPositionId,
-            this.ItemForStatus});
+            this.ItemForPhone,
+            this.emptySpaceItem1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(619, 310);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(636, 269);
             // 
             // ItemForName
             // 
             this.ItemForName.Control = this.NameTextEdit;
             this.ItemForName.Location = new System.Drawing.Point(0, 0);
             this.ItemForName.Name = "ItemForName";
-            this.ItemForName.Size = new System.Drawing.Size(619, 24);
+            this.ItemForName.Size = new System.Drawing.Size(318, 24);
             this.ItemForName.Text = "Name";
             this.ItemForName.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // ItemForDateOfBirth
-            // 
-            this.ItemForDateOfBirth.Control = this.DateOfBirthDateEdit;
-            this.ItemForDateOfBirth.Location = new System.Drawing.Point(0, 24);
-            this.ItemForDateOfBirth.Name = "ItemForDateOfBirth";
-            this.ItemForDateOfBirth.Size = new System.Drawing.Size(619, 24);
-            this.ItemForDateOfBirth.Text = "Date Of Birth";
-            this.ItemForDateOfBirth.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForGender
             // 
             this.ItemForGender.Control = this.GenderCheckEdit;
-            this.ItemForGender.Location = new System.Drawing.Point(0, 48);
+            this.ItemForGender.Location = new System.Drawing.Point(0, 24);
             this.ItemForGender.Name = "ItemForGender";
-            this.ItemForGender.Size = new System.Drawing.Size(619, 23);
+            this.ItemForGender.Size = new System.Drawing.Size(175, 27);
             this.ItemForGender.Text = "Gender";
-            this.ItemForGender.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForGender.TextVisible = false;
-            // 
-            // ItemForPhone
-            // 
-            this.ItemForPhone.Control = this.PhoneTextEdit;
-            this.ItemForPhone.Location = new System.Drawing.Point(0, 71);
-            this.ItemForPhone.Name = "ItemForPhone";
-            this.ItemForPhone.Size = new System.Drawing.Size(619, 24);
-            this.ItemForPhone.Text = "Phone";
-            this.ItemForPhone.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // ItemForEmail
-            // 
-            this.ItemForEmail.Control = this.EmailTextEdit;
-            this.ItemForEmail.Location = new System.Drawing.Point(0, 95);
-            this.ItemForEmail.Name = "ItemForEmail";
-            this.ItemForEmail.Size = new System.Drawing.Size(619, 24);
-            this.ItemForEmail.Text = "Email";
-            this.ItemForEmail.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForGender.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForIDCardNo
             // 
             this.ItemForIDCardNo.Control = this.IDCardNoTextEdit;
-            this.ItemForIDCardNo.Location = new System.Drawing.Point(0, 119);
+            this.ItemForIDCardNo.Location = new System.Drawing.Point(0, 75);
             this.ItemForIDCardNo.Name = "ItemForIDCardNo";
-            this.ItemForIDCardNo.Size = new System.Drawing.Size(619, 24);
+            this.ItemForIDCardNo.Size = new System.Drawing.Size(175, 24);
             this.ItemForIDCardNo.Text = "ID Card No";
             this.ItemForIDCardNo.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // ItemForDateIssued
-            // 
-            this.ItemForDateIssued.Control = this.DateIssuedDateEdit;
-            this.ItemForDateIssued.Location = new System.Drawing.Point(0, 143);
-            this.ItemForDateIssued.Name = "ItemForDateIssued";
-            this.ItemForDateIssued.Size = new System.Drawing.Size(619, 24);
-            this.ItemForDateIssued.Text = "Date Issued";
-            this.ItemForDateIssued.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // ItemForPlaceIssued
-            // 
-            this.ItemForPlaceIssued.Control = this.PlaceIssuedTextEdit;
-            this.ItemForPlaceIssued.Location = new System.Drawing.Point(0, 167);
-            this.ItemForPlaceIssued.Name = "ItemForPlaceIssued";
-            this.ItemForPlaceIssued.Size = new System.Drawing.Size(619, 24);
-            this.ItemForPlaceIssued.Text = "Place Issued";
-            this.ItemForPlaceIssued.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForJoinDate
             // 
             this.ItemForJoinDate.Control = this.JoinDateDateEdit;
-            this.ItemForJoinDate.Location = new System.Drawing.Point(0, 191);
+            this.ItemForJoinDate.Location = new System.Drawing.Point(0, 99);
             this.ItemForJoinDate.Name = "ItemForJoinDate";
-            this.ItemForJoinDate.Size = new System.Drawing.Size(619, 24);
+            this.ItemForJoinDate.Size = new System.Drawing.Size(281, 24);
             this.ItemForJoinDate.Text = "Join Date";
             this.ItemForJoinDate.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // ItemForStatus
+            // 
+            this.ItemForStatus.Control = this.StatusCheckEdit;
+            this.ItemForStatus.Location = new System.Drawing.Point(0, 147);
+            this.ItemForStatus.Name = "ItemForStatus";
+            this.ItemForStatus.Size = new System.Drawing.Size(636, 122);
+            this.ItemForStatus.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForStatus.TextVisible = false;
+            // 
+            // ItemForDateOfBirth
+            // 
+            this.ItemForDateOfBirth.Control = this.DateOfBirthDateEdit;
+            this.ItemForDateOfBirth.Location = new System.Drawing.Point(175, 24);
+            this.ItemForDateOfBirth.Name = "ItemForDateOfBirth";
+            this.ItemForDateOfBirth.Size = new System.Drawing.Size(179, 27);
+            this.ItemForDateOfBirth.Text = "Date Of Birth";
+            this.ItemForDateOfBirth.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // ItemForDateIssued
+            // 
+            this.ItemForDateIssued.Control = this.DateIssuedDateEdit;
+            this.ItemForDateIssued.Location = new System.Drawing.Point(175, 75);
+            this.ItemForDateIssued.Name = "ItemForDateIssued";
+            this.ItemForDateIssued.Size = new System.Drawing.Size(179, 24);
+            this.ItemForDateIssued.Text = "Date Issued";
+            this.ItemForDateIssued.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // ItemForPositionId
+            // 
+            this.ItemForPositionId.Control = this.PositionIdComboBoxEdit;
+            this.ItemForPositionId.Location = new System.Drawing.Point(281, 99);
+            this.ItemForPositionId.Name = "ItemForPositionId";
+            this.ItemForPositionId.Size = new System.Drawing.Size(355, 24);
+            this.ItemForPositionId.Text = "Position Id";
+            this.ItemForPositionId.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // ItemForEmail
+            // 
+            this.ItemForEmail.Control = this.EmailTextEdit;
+            this.ItemForEmail.Location = new System.Drawing.Point(0, 51);
+            this.ItemForEmail.Name = "ItemForEmail";
+            this.ItemForEmail.Size = new System.Drawing.Size(636, 24);
+            this.ItemForEmail.Text = "Email";
+            this.ItemForEmail.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // ItemForPlaceIssued
+            // 
+            this.ItemForPlaceIssued.Control = this.PlaceIssuedTextEdit;
+            this.ItemForPlaceIssued.Location = new System.Drawing.Point(354, 75);
+            this.ItemForPlaceIssued.Name = "ItemForPlaceIssued";
+            this.ItemForPlaceIssued.Size = new System.Drawing.Size(282, 24);
+            this.ItemForPlaceIssued.Text = "Place Issued";
+            this.ItemForPlaceIssued.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForDepartmentId
             // 
             this.ItemForDepartmentId.Control = this.DepartmentIdComboBoxEdit;
-            this.ItemForDepartmentId.Location = new System.Drawing.Point(0, 215);
+            this.ItemForDepartmentId.Location = new System.Drawing.Point(0, 123);
             this.ItemForDepartmentId.Name = "ItemForDepartmentId";
-            this.ItemForDepartmentId.Size = new System.Drawing.Size(619, 24);
+            this.ItemForDepartmentId.Size = new System.Drawing.Size(281, 24);
             this.ItemForDepartmentId.Text = "Department Id";
             this.ItemForDepartmentId.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForLeaderId
             // 
             this.ItemForLeaderId.Control = this.LeaderIdComboBoxEdit;
-            this.ItemForLeaderId.Location = new System.Drawing.Point(0, 239);
+            this.ItemForLeaderId.Location = new System.Drawing.Point(281, 123);
             this.ItemForLeaderId.Name = "ItemForLeaderId";
-            this.ItemForLeaderId.Size = new System.Drawing.Size(619, 24);
+            this.ItemForLeaderId.Size = new System.Drawing.Size(355, 24);
             this.ItemForLeaderId.Text = "Leader Id";
             this.ItemForLeaderId.TextSize = new System.Drawing.Size(70, 13);
             // 
-            // ItemForPositionId
+            // ItemForPhone
             // 
-            this.ItemForPositionId.Control = this.PositionIdComboBoxEdit;
-            this.ItemForPositionId.Location = new System.Drawing.Point(0, 263);
-            this.ItemForPositionId.Name = "ItemForPositionId";
-            this.ItemForPositionId.Size = new System.Drawing.Size(619, 24);
-            this.ItemForPositionId.Text = "Position Id";
-            this.ItemForPositionId.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForPhone.Control = this.PhoneTextEdit;
+            this.ItemForPhone.Location = new System.Drawing.Point(354, 24);
+            this.ItemForPhone.Name = "ItemForPhone";
+            this.ItemForPhone.Size = new System.Drawing.Size(282, 27);
+            this.ItemForPhone.Text = "Phone";
+            this.ItemForPhone.TextSize = new System.Drawing.Size(70, 13);
             // 
-            // ItemForStatus
+            // emptySpaceItem1
             // 
-            this.ItemForStatus.Control = this.StatusCheckEdit;
-            this.ItemForStatus.Location = new System.Drawing.Point(0, 287);
-            this.ItemForStatus.Name = "ItemForStatus";
-            this.ItemForStatus.Size = new System.Drawing.Size(619, 23);
-            this.ItemForStatus.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForStatus.TextVisible = false;
-            // 
-            // positionBindingSource
-            // 
-            this.positionBindingSource.DataSource = typeof(QLNS.Model.Models.Position);
-            // 
-            // departmentBindingSource
-            // 
-            this.departmentBindingSource.DataSource = typeof(QLNS.Model.Models.Department);
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(318, 0);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(318, 24);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // EmployeesEditFormView
             // 
@@ -587,7 +631,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateOfBirthDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DateOfBirthDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GenderCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PhoneTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDCardNoTextEdit.Properties)).EndInit();
@@ -596,27 +639,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.PlaceIssuedTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JoinDateDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.JoinDateDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepartmentIdComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.LeaderIdComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PositionIdComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StatusCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GenderCheckEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepartmentIdComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PositionIdComboBoxEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeaderIdComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateOfBirth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForIDCardNo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateIssued)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPlaceIssued)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForJoinDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateOfBirth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForDateIssued)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPositionId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPlaceIssued)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDepartmentId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForLeaderId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForPositionId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForPhone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -640,16 +685,12 @@
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraEditors.DateEdit DateOfBirthDateEdit;
-        private DevExpress.XtraEditors.CheckEdit GenderCheckEdit;
         private DevExpress.XtraEditors.TextEdit PhoneTextEdit;
         private DevExpress.XtraEditors.TextEdit EmailTextEdit;
         private DevExpress.XtraEditors.TextEdit IDCardNoTextEdit;
         private DevExpress.XtraEditors.DateEdit DateIssuedDateEdit;
         private DevExpress.XtraEditors.TextEdit PlaceIssuedTextEdit;
         private DevExpress.XtraEditors.DateEdit JoinDateDateEdit;
-        private DevExpress.XtraEditors.ComboBoxEdit DepartmentIdComboBoxEdit;
-        private DevExpress.XtraEditors.ComboBoxEdit LeaderIdComboBoxEdit;
-        private DevExpress.XtraEditors.ComboBoxEdit PositionIdComboBoxEdit;
         private DevExpress.XtraEditors.CheckEdit StatusCheckEdit;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
@@ -667,6 +708,11 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForPositionId;
         private DevExpress.XtraLayout.LayoutControlItem ItemForStatus;
         private System.Windows.Forms.BindingSource positionBindingSource;
-        private System.Windows.Forms.BindingSource departmentBindingSource;
+        private DevExpress.XtraEditors.RadioGroup GenderCheckEdit;
+        private DevExpress.XtraEditors.LookUpEdit DepartmentIdComboBoxEdit;
+        private DevExpress.XtraEditors.LookUpEdit PositionIdComboBoxEdit;
+        private DevExpress.XtraEditors.LookUpEdit LeaderIdComboBoxEdit;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private System.Windows.Forms.BindingSource departmentsBindingSource;
     }
 }

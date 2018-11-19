@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLNS.UI.ViewModels;
+using System.Data.Entity;
 
 namespace QLNS.UI.Views.Employee
 {
@@ -29,7 +30,7 @@ namespace QLNS.UI.Views.Employee
         {
             var fluent = mvvmContext1.OfType<EmployeeViewModel>();
             fluent.SetObjectDataSourceBinding( employeeBindingSource, x => x.Entity, x => x.Update());
-            fluent.SetBinding(departmentBindingSource, dbs => dbs.DataSource, x => x.LookUpDepartments.Entities);
+            fluent.SetBinding(departmentsBindingSource, dbs => dbs.DataSource, x => x.LookUpDepartments.Entities);
             fluent.SetBinding(positionBindingSource, pbs => pbs.DataSource, vm => vm.LookUpPositions.Entities);
             
         }
