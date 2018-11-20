@@ -54,7 +54,7 @@
             this.StatusCheckEdit = new DevExpress.XtraEditors.CheckEdit();
             this.GenderCheckEdit = new DevExpress.XtraEditors.RadioGroup();
             this.DepartmentIdComboBoxEdit = new DevExpress.XtraEditors.LookUpEdit();
-            this.departmentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.departmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PositionIdComboBoxEdit = new DevExpress.XtraEditors.LookUpEdit();
             this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LeaderIdComboBoxEdit = new DevExpress.XtraEditors.LookUpEdit();
@@ -93,7 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StatusCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenderCheckEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartmentIdComboBoxEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PositionIdComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeaderIdComboBoxEdit.Properties)).BeginInit();
@@ -227,6 +227,9 @@
             // dataLayoutControl1
             // 
             this.dataLayoutControl1.AllowGeneratingCollectionProperties = DevExpress.Utils.DefaultBoolean.False;
+            this.dataLayoutControl1.Appearance.Control.Options.UseTextOptions = true;
+            this.dataLayoutControl1.Appearance.Control.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.dataLayoutControl1.Appearance.Control.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.dataLayoutControl1.Controls.Add(this.NameTextEdit);
             this.dataLayoutControl1.Controls.Add(this.DateOfBirthDateEdit);
             this.dataLayoutControl1.Controls.Add(this.PhoneTextEdit);
@@ -240,6 +243,8 @@
             this.dataLayoutControl1.Controls.Add(this.DepartmentIdComboBoxEdit);
             this.dataLayoutControl1.Controls.Add(this.PositionIdComboBoxEdit);
             this.dataLayoutControl1.Controls.Add(this.LeaderIdComboBoxEdit);
+            this.dataLayoutControl1.DataMember = null;
+            this.dataLayoutControl1.DataSource = this.employeeBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 141);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
@@ -266,7 +271,7 @@
             // 
             this.DateOfBirthDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "DateOfBirth", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DateOfBirthDateEdit.EditValue = null;
-            this.DateOfBirthDateEdit.Location = new System.Drawing.Point(260, 36);
+            this.DateOfBirthDateEdit.Location = new System.Drawing.Point(297, 36);
             this.DateOfBirthDateEdit.MenuManager = this.ribbonControl1;
             this.DateOfBirthDateEdit.Name = "DateOfBirthDateEdit";
             this.DateOfBirthDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -274,19 +279,23 @@
             this.DateOfBirthDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DateOfBirthDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
+            this.DateOfBirthDateEdit.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.DateOfBirthDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DateOfBirthDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.DateOfBirthDateEdit.Properties.NullDate = new System.DateTime(2018, 11, 21, 0, 39, 26, 0);
+            this.DateOfBirthDateEdit.Properties.NullText = "Chọn ngày";
             this.DateOfBirthDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.DateOfBirthDateEdit.Size = new System.Drawing.Size(102, 20);
+            this.DateOfBirthDateEdit.Size = new System.Drawing.Size(135, 20);
             this.DateOfBirthDateEdit.StyleController = this.dataLayoutControl1;
             this.DateOfBirthDateEdit.TabIndex = 5;
             // 
             // PhoneTextEdit
             // 
             this.PhoneTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "Phone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PhoneTextEdit.Location = new System.Drawing.Point(439, 36);
+            this.PhoneTextEdit.Location = new System.Drawing.Point(509, 36);
             this.PhoneTextEdit.MenuManager = this.ribbonControl1;
             this.PhoneTextEdit.Name = "PhoneTextEdit";
-            this.PhoneTextEdit.Size = new System.Drawing.Size(205, 20);
+            this.PhoneTextEdit.Size = new System.Drawing.Size(135, 20);
             this.PhoneTextEdit.StyleController = this.dataLayoutControl1;
             this.PhoneTextEdit.TabIndex = 7;
             // 
@@ -306,7 +315,7 @@
             this.IDCardNoTextEdit.Location = new System.Drawing.Point(85, 87);
             this.IDCardNoTextEdit.MenuManager = this.ribbonControl1;
             this.IDCardNoTextEdit.Name = "IDCardNoTextEdit";
-            this.IDCardNoTextEdit.Size = new System.Drawing.Size(98, 20);
+            this.IDCardNoTextEdit.Size = new System.Drawing.Size(135, 20);
             this.IDCardNoTextEdit.StyleController = this.dataLayoutControl1;
             this.IDCardNoTextEdit.TabIndex = 9;
             // 
@@ -314,7 +323,7 @@
             // 
             this.DateIssuedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "DateIssued", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DateIssuedDateEdit.EditValue = null;
-            this.DateIssuedDateEdit.Location = new System.Drawing.Point(260, 87);
+            this.DateIssuedDateEdit.Location = new System.Drawing.Point(297, 87);
             this.DateIssuedDateEdit.MenuManager = this.ribbonControl1;
             this.DateIssuedDateEdit.Name = "DateIssuedDateEdit";
             this.DateIssuedDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -324,18 +333,19 @@
             this.DateIssuedDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Classic;
             this.DateIssuedDateEdit.Properties.Mask.BeepOnError = true;
             this.DateIssuedDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.DateIssuedDateEdit.Properties.NullText = "Chọn ngày";
             this.DateIssuedDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.DateIssuedDateEdit.Size = new System.Drawing.Size(102, 20);
+            this.DateIssuedDateEdit.Size = new System.Drawing.Size(135, 20);
             this.DateIssuedDateEdit.StyleController = this.dataLayoutControl1;
             this.DateIssuedDateEdit.TabIndex = 10;
             // 
             // PlaceIssuedTextEdit
             // 
             this.PlaceIssuedTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "PlaceIssued", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PlaceIssuedTextEdit.Location = new System.Drawing.Point(439, 87);
+            this.PlaceIssuedTextEdit.Location = new System.Drawing.Point(509, 87);
             this.PlaceIssuedTextEdit.MenuManager = this.ribbonControl1;
             this.PlaceIssuedTextEdit.Name = "PlaceIssuedTextEdit";
-            this.PlaceIssuedTextEdit.Size = new System.Drawing.Size(205, 20);
+            this.PlaceIssuedTextEdit.Size = new System.Drawing.Size(135, 20);
             this.PlaceIssuedTextEdit.StyleController = this.dataLayoutControl1;
             this.PlaceIssuedTextEdit.TabIndex = 11;
             // 
@@ -353,8 +363,9 @@
             this.JoinDateDateEdit.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Vista;
             this.JoinDateDateEdit.Properties.Mask.BeepOnError = true;
             this.JoinDateDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.JoinDateDateEdit.Properties.NullText = "Chọn ngày";
             this.JoinDateDateEdit.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.True;
-            this.JoinDateDateEdit.Size = new System.Drawing.Size(204, 20);
+            this.JoinDateDateEdit.Size = new System.Drawing.Size(241, 20);
             this.JoinDateDateEdit.StyleController = this.dataLayoutControl1;
             this.JoinDateDateEdit.TabIndex = 12;
             // 
@@ -365,7 +376,6 @@
             this.StatusCheckEdit.MenuManager = this.ribbonControl1;
             this.StatusCheckEdit.Name = "StatusCheckEdit";
             this.StatusCheckEdit.Properties.Caption = "Active";
-            this.StatusCheckEdit.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Default;
             this.StatusCheckEdit.Size = new System.Drawing.Size(632, 19);
             this.StatusCheckEdit.StyleController = this.dataLayoutControl1;
             this.StatusCheckEdit.TabIndex = 16;
@@ -383,7 +393,7 @@
             this.GenderCheckEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(true, "Nam"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(false, "Nữ")});
-            this.GenderCheckEdit.Size = new System.Drawing.Size(98, 23);
+            this.GenderCheckEdit.Size = new System.Drawing.Size(135, 23);
             this.GenderCheckEdit.StyleController = this.dataLayoutControl1;
             this.GenderCheckEdit.TabIndex = 6;
             // 
@@ -397,37 +407,61 @@
             this.DepartmentIdComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.DepartmentIdComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.DepartmentIdComboBoxEdit.Properties.DataSource = this.departmentsBindingSource;
+            this.DepartmentIdComboBoxEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 5, DevExpress.Utils.FormatType.Numeric, "##0", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Alias", "Alias", 32, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Employees", "Employees", 61, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("WorkingProcesses", "Working Processes", 100, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Status", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedDate", "Ngày tạo", 54, DevExpress.Utils.FormatType.DateTime, "M/d/yyyy", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedBy", "Người tạo", 57, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedDate", "Ngày sửa", 56, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedBy", "Người sửa", 59, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near)});
+            this.DepartmentIdComboBoxEdit.Properties.DataSource = this.departmentBindingSource;
             this.DepartmentIdComboBoxEdit.Properties.DisplayMember = "Name";
-            this.DepartmentIdComboBoxEdit.Properties.NullText = "";
+            this.DepartmentIdComboBoxEdit.Properties.KeyMember = "Id";
+            this.DepartmentIdComboBoxEdit.Properties.NullText = "Chọn phòng ban";
+            this.DepartmentIdComboBoxEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.DepartmentIdComboBoxEdit.Properties.PopupSizeable = false;
             this.DepartmentIdComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.DepartmentIdComboBoxEdit.Properties.ValueMember = "Id";
-            this.DepartmentIdComboBoxEdit.Size = new System.Drawing.Size(204, 20);
+            this.DepartmentIdComboBoxEdit.Size = new System.Drawing.Size(241, 20);
             this.DepartmentIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.DepartmentIdComboBoxEdit.TabIndex = 13;
             // 
-            // departmentsBindingSource
+            // departmentBindingSource
             // 
-            this.departmentsBindingSource.DataSource = typeof(QLNS.Model.Models.Department);
+            this.departmentBindingSource.DataSource = typeof(QLNS.Model.Models.Department);
             // 
             // PositionIdComboBoxEdit
             // 
             this.PositionIdComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "PositionId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.PositionIdComboBoxEdit.Location = new System.Drawing.Point(366, 111);
+            this.PositionIdComboBoxEdit.Location = new System.Drawing.Point(403, 111);
             this.PositionIdComboBoxEdit.MenuManager = this.ribbonControl1;
             this.PositionIdComboBoxEdit.Name = "PositionIdComboBoxEdit";
             this.PositionIdComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.PositionIdComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.PositionIdComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.PositionIdComboBoxEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 5, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Employees", "Employees", 61, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("WorkingProcesses", "Working Processes", 100, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Status", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedDate", "Ngày tạo", 54, DevExpress.Utils.FormatType.DateTime, "M/d/yyyy", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedBy", "Người tạo", 57, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedDate", "Ngày sửa", 56, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedBy", "Người sửa", 59, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near)});
             this.PositionIdComboBoxEdit.Properties.DataSource = this.positionBindingSource;
             this.PositionIdComboBoxEdit.Properties.DisplayMember = "Name";
-            this.PositionIdComboBoxEdit.Properties.NullText = "";
+            this.PositionIdComboBoxEdit.Properties.NullText = "Chọn chức vụ";
+            this.PositionIdComboBoxEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.PositionIdComboBoxEdit.Properties.PopupSizeable = false;
             this.PositionIdComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.PositionIdComboBoxEdit.Properties.ValueMember = "Id";
-            this.PositionIdComboBoxEdit.Size = new System.Drawing.Size(278, 20);
+            this.PositionIdComboBoxEdit.Size = new System.Drawing.Size(241, 20);
             this.PositionIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.PositionIdComboBoxEdit.TabIndex = 15;
             // 
@@ -438,21 +472,46 @@
             // LeaderIdComboBoxEdit
             // 
             this.LeaderIdComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeeBindingSource, "LeaderId", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.LeaderIdComboBoxEdit.Location = new System.Drawing.Point(366, 135);
+            this.LeaderIdComboBoxEdit.Location = new System.Drawing.Point(403, 135);
             this.LeaderIdComboBoxEdit.MenuManager = this.ribbonControl1;
             this.LeaderIdComboBoxEdit.Name = "LeaderIdComboBoxEdit";
             this.LeaderIdComboBoxEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.LeaderIdComboBoxEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.LeaderIdComboBoxEdit.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFitResizePopup;
             this.LeaderIdComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.LeaderIdComboBoxEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Id", "Id", 5, DevExpress.Utils.FormatType.Numeric, "", true, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name", 37, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DateOfBirth", "Date Of Birth", 73, DevExpress.Utils.FormatType.DateTime, "M/d/yyyy", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Gender", "Gender", 45, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Phone", "Phone", 40, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Email", "Email", 34, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("IDCardNo", "ID Card No", 63, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DateIssued", "Date Issued", 68, DevExpress.Utils.FormatType.DateTime, "M/d/yyyy", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PlaceIssued", "Place Issued", 70, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("JoinDate", "Join Date", 55, DevExpress.Utils.FormatType.DateTime, "M/d/yyyy", false, DevExpress.Utils.HorzAlignment.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DepartmentId", "Department Id", 80, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("LeaderId", "Leader Id", 56, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("PositionId", "Position Id", 60, DevExpress.Utils.FormatType.Numeric, "", false, DevExpress.Utils.HorzAlignment.Far),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("WorkingProcesses", "Working Processes", 100, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Position", "Position", 47, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Leader", "Leader", 43, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Department", "Department", 67, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Status", "Tình trạng", 59, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedDate", "Ngày tạo", 54, DevExpress.Utils.FormatType.DateTime, "M/d/yyyy", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CreatedBy", "Người tạo", 57, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedDate", "Ngày sửa", 56, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ModifiedBy", "Người sửa", 59, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Near)});
             this.LeaderIdComboBoxEdit.Properties.DataSource = this.employeeBindingSource;
             this.LeaderIdComboBoxEdit.Properties.DisplayMember = "Name";
-            this.LeaderIdComboBoxEdit.Properties.NullText = "";
+            this.LeaderIdComboBoxEdit.Properties.NullText = "Chọn quản lý trực tiếp";
+            this.LeaderIdComboBoxEdit.Properties.NullValuePromptShowForEmptyValue = true;
             this.LeaderIdComboBoxEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.LeaderIdComboBoxEdit.Properties.PopupSizeable = false;
             this.LeaderIdComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             this.LeaderIdComboBoxEdit.Properties.ValueMember = "Id";
-            this.LeaderIdComboBoxEdit.Size = new System.Drawing.Size(278, 20);
+            this.LeaderIdComboBoxEdit.Size = new System.Drawing.Size(241, 20);
             this.LeaderIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.LeaderIdComboBoxEdit.TabIndex = 14;
             // 
@@ -504,7 +563,7 @@
             this.ItemForGender.Control = this.GenderCheckEdit;
             this.ItemForGender.Location = new System.Drawing.Point(0, 24);
             this.ItemForGender.Name = "ItemForGender";
-            this.ItemForGender.Size = new System.Drawing.Size(175, 27);
+            this.ItemForGender.Size = new System.Drawing.Size(212, 27);
             this.ItemForGender.Text = "Gender";
             this.ItemForGender.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -513,7 +572,7 @@
             this.ItemForIDCardNo.Control = this.IDCardNoTextEdit;
             this.ItemForIDCardNo.Location = new System.Drawing.Point(0, 75);
             this.ItemForIDCardNo.Name = "ItemForIDCardNo";
-            this.ItemForIDCardNo.Size = new System.Drawing.Size(175, 24);
+            this.ItemForIDCardNo.Size = new System.Drawing.Size(212, 24);
             this.ItemForIDCardNo.Text = "ID Card No";
             this.ItemForIDCardNo.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -522,7 +581,7 @@
             this.ItemForJoinDate.Control = this.JoinDateDateEdit;
             this.ItemForJoinDate.Location = new System.Drawing.Point(0, 99);
             this.ItemForJoinDate.Name = "ItemForJoinDate";
-            this.ItemForJoinDate.Size = new System.Drawing.Size(281, 24);
+            this.ItemForJoinDate.Size = new System.Drawing.Size(318, 24);
             this.ItemForJoinDate.Text = "Join Date";
             this.ItemForJoinDate.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -538,27 +597,27 @@
             // ItemForDateOfBirth
             // 
             this.ItemForDateOfBirth.Control = this.DateOfBirthDateEdit;
-            this.ItemForDateOfBirth.Location = new System.Drawing.Point(175, 24);
+            this.ItemForDateOfBirth.Location = new System.Drawing.Point(212, 24);
             this.ItemForDateOfBirth.Name = "ItemForDateOfBirth";
-            this.ItemForDateOfBirth.Size = new System.Drawing.Size(179, 27);
+            this.ItemForDateOfBirth.Size = new System.Drawing.Size(212, 27);
             this.ItemForDateOfBirth.Text = "Date Of Birth";
             this.ItemForDateOfBirth.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForDateIssued
             // 
             this.ItemForDateIssued.Control = this.DateIssuedDateEdit;
-            this.ItemForDateIssued.Location = new System.Drawing.Point(175, 75);
+            this.ItemForDateIssued.Location = new System.Drawing.Point(212, 75);
             this.ItemForDateIssued.Name = "ItemForDateIssued";
-            this.ItemForDateIssued.Size = new System.Drawing.Size(179, 24);
+            this.ItemForDateIssued.Size = new System.Drawing.Size(212, 24);
             this.ItemForDateIssued.Text = "Date Issued";
             this.ItemForDateIssued.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForPositionId
             // 
             this.ItemForPositionId.Control = this.PositionIdComboBoxEdit;
-            this.ItemForPositionId.Location = new System.Drawing.Point(281, 99);
+            this.ItemForPositionId.Location = new System.Drawing.Point(318, 99);
             this.ItemForPositionId.Name = "ItemForPositionId";
-            this.ItemForPositionId.Size = new System.Drawing.Size(355, 24);
+            this.ItemForPositionId.Size = new System.Drawing.Size(318, 24);
             this.ItemForPositionId.Text = "Position Id";
             this.ItemForPositionId.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -574,9 +633,9 @@
             // ItemForPlaceIssued
             // 
             this.ItemForPlaceIssued.Control = this.PlaceIssuedTextEdit;
-            this.ItemForPlaceIssued.Location = new System.Drawing.Point(354, 75);
+            this.ItemForPlaceIssued.Location = new System.Drawing.Point(424, 75);
             this.ItemForPlaceIssued.Name = "ItemForPlaceIssued";
-            this.ItemForPlaceIssued.Size = new System.Drawing.Size(282, 24);
+            this.ItemForPlaceIssued.Size = new System.Drawing.Size(212, 24);
             this.ItemForPlaceIssued.Text = "Place Issued";
             this.ItemForPlaceIssued.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -585,25 +644,25 @@
             this.ItemForDepartmentId.Control = this.DepartmentIdComboBoxEdit;
             this.ItemForDepartmentId.Location = new System.Drawing.Point(0, 123);
             this.ItemForDepartmentId.Name = "ItemForDepartmentId";
-            this.ItemForDepartmentId.Size = new System.Drawing.Size(281, 24);
+            this.ItemForDepartmentId.Size = new System.Drawing.Size(318, 24);
             this.ItemForDepartmentId.Text = "Department Id";
             this.ItemForDepartmentId.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForLeaderId
             // 
             this.ItemForLeaderId.Control = this.LeaderIdComboBoxEdit;
-            this.ItemForLeaderId.Location = new System.Drawing.Point(281, 123);
+            this.ItemForLeaderId.Location = new System.Drawing.Point(318, 123);
             this.ItemForLeaderId.Name = "ItemForLeaderId";
-            this.ItemForLeaderId.Size = new System.Drawing.Size(355, 24);
+            this.ItemForLeaderId.Size = new System.Drawing.Size(318, 24);
             this.ItemForLeaderId.Text = "Leader Id";
             this.ItemForLeaderId.TextSize = new System.Drawing.Size(70, 13);
             // 
             // ItemForPhone
             // 
             this.ItemForPhone.Control = this.PhoneTextEdit;
-            this.ItemForPhone.Location = new System.Drawing.Point(354, 24);
+            this.ItemForPhone.Location = new System.Drawing.Point(424, 24);
             this.ItemForPhone.Name = "ItemForPhone";
-            this.ItemForPhone.Size = new System.Drawing.Size(282, 27);
+            this.ItemForPhone.Size = new System.Drawing.Size(212, 27);
             this.ItemForPhone.Text = "Phone";
             this.ItemForPhone.TextSize = new System.Drawing.Size(70, 13);
             // 
@@ -642,7 +701,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.StatusCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GenderCheckEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepartmentIdComboBoxEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PositionIdComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeaderIdComboBoxEdit.Properties)).EndInit();
@@ -713,6 +772,6 @@
         private DevExpress.XtraEditors.LookUpEdit PositionIdComboBoxEdit;
         private DevExpress.XtraEditors.LookUpEdit LeaderIdComboBoxEdit;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
-        private System.Windows.Forms.BindingSource departmentsBindingSource;
+        private System.Windows.Forms.BindingSource departmentBindingSource;
     }
 }

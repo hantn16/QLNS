@@ -19,7 +19,6 @@ namespace QLNS.UI.Views.Employee
         public EmployeesEditFormView()
         {
             InitializeComponent();
-            InitializeComponent();
             if (!DesignMode)
             {
                 InitBindings();
@@ -30,7 +29,7 @@ namespace QLNS.UI.Views.Employee
         {
             var fluent = mvvmContext1.OfType<EmployeeViewModel>();
             fluent.SetObjectDataSourceBinding( employeeBindingSource, x => x.Entity, x => x.Update());
-            fluent.SetBinding(departmentsBindingSource, dbs => dbs.DataSource, x => x.LookUpDepartments.Entities);
+            fluent.SetBinding(departmentBindingSource, dbs => dbs.DataSource, x => x.LookUpDepartments.Entities);
             fluent.SetBinding(positionBindingSource, pbs => pbs.DataSource, vm => vm.LookUpPositions.Entities);
             
         }
