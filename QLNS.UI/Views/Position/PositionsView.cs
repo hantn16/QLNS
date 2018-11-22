@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLNS.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLNS.UI.Views.Position
 {
@@ -35,6 +36,15 @@ namespace QLNS.UI.Views.Position
             .SetBinding(x => x.SelectedEntity,
             args => args.Row as QLNS.Model.Models.Position,
             (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            HideGridViewColumns(gridView1, new List<string> { "Employees","WorkingProcesses"});
+        }
+
+        private void HideGridViewColumns(GridView gv, List<string> listGVC)
+        {
+            foreach (string gvc in listGVC)
+            {
+                gv.Columns[gvc].Visible = false;
+            }
         }
     }
 }

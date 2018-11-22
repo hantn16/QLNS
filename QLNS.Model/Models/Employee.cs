@@ -50,7 +50,7 @@ namespace QLNS.Model.Models
         public int PositionId { get; set; }
 
         //Navigation Properties
-        public virtual IEnumerable<WorkingProcess> WorkingProcesses { get; set; }
+        public virtual ICollection<WorkingProcess> WorkingProcesses { get; set; }
 
         [ForeignKey("PositionId")]
         public virtual Position Position { get; set; }

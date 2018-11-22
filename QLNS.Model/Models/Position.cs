@@ -21,8 +21,8 @@ namespace QLNS.Model.Models
         public string Name { get; set; }
 
         //Navigation Properties
-        public virtual IEnumerable<Employee> Employees { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
 
-        public virtual IEnumerable<WorkingProcess> WorkingProcesses { get; set; }
+        public virtual ICollection<WorkingProcess> WorkingProcesses { get; set; }
     }
 }
