@@ -259,6 +259,7 @@
             this.NameTextEdit.Location = new System.Drawing.Point(85, 12);
             this.NameTextEdit.MenuManager = this.ribbonControl1;
             this.NameTextEdit.Name = "NameTextEdit";
+            this.NameTextEdit.Properties.NullText = "Điền tên vào đây";
             this.NameTextEdit.Size = new System.Drawing.Size(241, 20);
             this.NameTextEdit.StyleController = this.dataLayoutControl1;
             this.NameTextEdit.TabIndex = 4;
@@ -375,8 +376,9 @@
             this.StatusCheckEdit.Location = new System.Drawing.Point(12, 159);
             this.StatusCheckEdit.MenuManager = this.ribbonControl1;
             this.StatusCheckEdit.Name = "StatusCheckEdit";
+            this.StatusCheckEdit.Properties.AutoWidth = true;
             this.StatusCheckEdit.Properties.Caption = "Active";
-            this.StatusCheckEdit.Size = new System.Drawing.Size(632, 19);
+            this.StatusCheckEdit.Size = new System.Drawing.Size(52, 19);
             this.StatusCheckEdit.StyleController = this.dataLayoutControl1;
             this.StatusCheckEdit.TabIndex = 16;
             // 
@@ -422,6 +424,7 @@
             this.DepartmentIdComboBoxEdit.Properties.DisplayMember = "Name";
             this.DepartmentIdComboBoxEdit.Properties.KeyMember = "Id";
             this.DepartmentIdComboBoxEdit.Properties.NullText = "Chọn phòng ban";
+            this.DepartmentIdComboBoxEdit.Properties.NullValuePromptShowForEmptyValue = true;
             this.DepartmentIdComboBoxEdit.Properties.PopupFilterMode = DevExpress.XtraEditors.PopupFilterMode.Contains;
             this.DepartmentIdComboBoxEdit.Properties.PopupSizeable = false;
             this.DepartmentIdComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
@@ -429,6 +432,7 @@
             this.DepartmentIdComboBoxEdit.Size = new System.Drawing.Size(241, 20);
             this.DepartmentIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.DepartmentIdComboBoxEdit.TabIndex = 13;
+            this.DepartmentIdComboBoxEdit.CustomDisplayText += new DevExpress.XtraEditors.Controls.CustomDisplayTextEventHandler(this.LookUpEdit_CustomDisplayText);
             // 
             // departmentBindingSource
             // 
@@ -464,6 +468,7 @@
             this.PositionIdComboBoxEdit.Size = new System.Drawing.Size(241, 20);
             this.PositionIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.PositionIdComboBoxEdit.TabIndex = 15;
+            this.PositionIdComboBoxEdit.CustomDisplayText += new DevExpress.XtraEditors.Controls.CustomDisplayTextEventHandler(this.LookUpEdit_CustomDisplayText);
             // 
             // positionBindingSource
             // 
@@ -514,6 +519,7 @@
             this.LeaderIdComboBoxEdit.Size = new System.Drawing.Size(241, 20);
             this.LeaderIdComboBoxEdit.StyleController = this.dataLayoutControl1;
             this.LeaderIdComboBoxEdit.TabIndex = 14;
+            //this.LeaderIdComboBoxEdit.CustomDisplayText += new DevExpress.XtraEditors.Controls.CustomDisplayTextEventHandler(this.LookUpEdit_CustomDisplayText);
             // 
             // layoutControlGroup1
             // 

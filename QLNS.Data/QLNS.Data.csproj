@@ -64,6 +64,14 @@
     <Compile Include="Migrations\201811190210259_Refix Auditable abstract class.Designer.cs">
       <DependentUpon>201811190210259_Refix Auditable abstract class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811210313380_Rename IAuditable Interface Properties.cs" />
+    <Compile Include="Migrations\201811210313380_Rename IAuditable Interface Properties.Designer.cs">
+      <DependentUpon>201811210313380_Rename IAuditable Interface Properties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811210328075_Add display name for properties.cs" />
+    <Compile Include="Migrations\201811210328075_Add display name for properties.Designer.cs">
+      <DependentUpon>201811210328075_Add display name for properties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyQLNSDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +86,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811190210259_Refix Auditable abstract class.resx">
       <DependentUpon>201811190210259_Refix Auditable abstract class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811210313380_Rename IAuditable Interface Properties.resx">
+      <DependentUpon>201811210313380_Rename IAuditable Interface Properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811210328075_Add display name for properties.resx">
+      <DependentUpon>201811210328075_Add display name for properties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

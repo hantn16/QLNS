@@ -21,9 +21,9 @@
                     Alias = "bo-phan-van-phong",
                     Status = true,
                     CreatedBy = "admin",
-                    CreatedDate = DateTime.Now,
+                    CreatedAt = DateTime.Now,
                     ModifiedBy = null,
-                    ModifiedDate = null
+                    ModifiedAt = null
                 };
                 Department dp2 = new Department()
                 {
@@ -31,9 +31,9 @@
                     Alias = "bo-phan-ky-thuat",
                     Status = true,
                     CreatedBy = "admin",
-                    CreatedDate = DateTime.Now,
+                    CreatedAt = DateTime.Now,
                     ModifiedBy = null,
-                    ModifiedDate = null
+                    ModifiedAt = null
                 };
                 context.Departments.Add(dp);
                 context.Departments.Add(dp2);
@@ -43,9 +43,9 @@
                     Name = "Trưởng ban",
                     Status = true,
                     CreatedBy = "admin",
-                    CreatedDate = DateTime.Now,
+                    CreatedAt = DateTime.Now,
                     ModifiedBy = null,
-                    ModifiedDate = null
+                    ModifiedAt = null
                 };
                 context.Positions.Add(pos1);
                 context.SaveChanges();

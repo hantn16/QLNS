@@ -33,9 +33,6 @@ namespace QLNS.UI.ViewModels {
         /// <param name="unitOfWorkFactory">A factory used to create a unit of work instance.</param>
         protected DepartmentViewModel(IUnitOfWorkFactory<IMyQLNSDbContextUnitOfWork> unitOfWorkFactory = null)
             : base(unitOfWorkFactory ?? UnitOfWorkSource.GetUnitOfWorkFactory(), x => x.Departments, x => x.Name) {
-                }
-
-
-
+        }
     }
 }

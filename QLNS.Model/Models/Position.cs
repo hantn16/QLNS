@@ -17,6 +17,7 @@ namespace QLNS.Model.Models
 
         [Required]
         [MaxLength(50)]
+        [Display(Name ="Tên chức vụ")]
         public string Name { get; set; }
 
         //Navigation Properties

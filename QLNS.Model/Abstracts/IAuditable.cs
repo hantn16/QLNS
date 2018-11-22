@@ -5,9 +5,9 @@ namespace QLNS.Model.Abstracts
     interface IAuditable
     {
         bool Status { get; set; }
-        DateTime CreatedDate { get; set; }
+        DateTime CreatedAt { get; set; }
         string CreatedBy { get; set; }
-        DateTime? ModifiedDate { get; set; }
+        DateTime? ModifiedAt { get; set; }
         string ModifiedBy { get; set; }
     }
 }

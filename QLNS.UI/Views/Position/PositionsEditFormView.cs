@@ -18,7 +18,6 @@ namespace QLNS.UI.Views.Position
         public PositionsEditFormView()
         {
             InitializeComponent();
-            InitializeComponent();
             if (!DesignMode)
             {
                 InitBindings();

@@ -9,13 +9,13 @@ namespace QLNS.Model.Abstracts
         public bool Status { get; set; }
 
         [Display(Name = "Ngày tạo")]
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         [Display(Name = "Người tạo")]
         public string CreatedBy { get; set; }
 
         [Display(Name = "Ngày sửa")]
-        public DateTime? ModifiedDate { get; set; }
+        public DateTime? ModifiedAt { get; set; }
 
         [Display(Name = "Người sửa")]
         public string ModifiedBy { get; set; }

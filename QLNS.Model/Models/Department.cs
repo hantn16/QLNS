@@ -18,6 +18,7 @@ namespace QLNS.Model.Models
 
         [MaxLength(50)]
         [Required]
+        [Display(Name = "Tên phòng ban")]
         public string Name { get; set; }
 
         [Required]
