@@ -48,9 +48,9 @@ namespace QLNS.UI.Views.Employee
                 "IDCardNo",
                 "DateIssued",
                 "PlaceIssued",
-                "Department",
-                "Leader",
-                "Position"
+                "DepartmentId",
+                "LeaderId",
+                "PositionId"
             };
             GridViewHelper.ShowOrHideGridViewColumns(gridView1, listClHide, false);
             GridColumn gc = gridView1.Columns["Department"];
@@ -60,10 +60,20 @@ namespace QLNS.UI.Views.Employee
         private void gridView1_CustomColumnDisplayText(object sender, CustomColumnDisplayTextEventArgs e)
         {
             ColumnView view = sender as ColumnView;
-            if (e.Column.FieldName == "DepartmentId" && e.Value != null)
+            if (e.Column.FieldName == "Department" && e.Value != null)
             {
-                //QLNS.Model.Models.Department department = new MyQLNSDbContext().Departments
-                //e.DisplayText = department.Name;
+                QLNS.Model.Models.Department department = e.Value as QLNS.Model.Models.Department;
+                e.DisplayText = department.Name;
+            }
+            if (e.Column.FieldName == "Position" && e.Value != null)
+            {
+                QLNS.Model.Models.Position pos = e.Value as QLNS.Model.Models.Position;
+                e.DisplayText = pos.Name;
+            }
+            if (e.Column.FieldName == "Leader" && e.Value != null)
+            {
+                QLNS.Model.Models.Employee leader = e.Value as QLNS.Model.Models.Employee;
+                e.DisplayText = leader.Name;
             }
         }
     }

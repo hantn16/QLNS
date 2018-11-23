@@ -16,7 +16,7 @@ namespace QLNS.Data
         public MyQLNSDbContext()
             : base("name=MyQLNSDbContext")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = true;
             Database.SetInitializer<MyQLNSDbContext>(new DropCreateDatabaseIfModelChanges<MyQLNSDbContext>());
         }
 
