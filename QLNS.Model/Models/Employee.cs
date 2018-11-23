@@ -16,6 +16,10 @@ namespace QLNS.Model.Models
         [Display(Name = "Họ và tên")]
         public string Name { get; set; }
 
+        [Column(TypeName = "varchar(MAX)")]
+        [Display(Name = "Ảnh đại diện")]
+        public string Avatar { get; set; }
+
         [Display(Name = "Ngày sinh")]
         public DateTime DateOfBirth { get; set; }
 

@@ -91,6 +91,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\GridViewHelper.cs" />
+    <Compile Include="Helper\ImageHelper.cs" />
     <Compile Include="MyQLNSDbContextDataModel\IMyQLNSDbContextUnitOfWork.cs" />
     <Compile Include="MyQLNSDbContextDataModel\MyQLNSDbContextUnitOfWork.cs" />
     <Compile Include="MyQLNSDbContextDataModel\UnitOfWorkSource.cs" />

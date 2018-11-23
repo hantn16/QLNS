@@ -72,6 +72,10 @@
     <Compile Include="Migrations\201811210328075_Add display name for properties.Designer.cs">
       <DependentUpon>201811210328075_Add display name for properties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811230954180_Add avatar property to employee entity.cs" />
+    <Compile Include="Migrations\201811230954180_Add avatar property to employee entity.Designer.cs">
+      <DependentUpon>201811230954180_Add avatar property to employee entity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyQLNSDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -92,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811210328075_Add display name for properties.resx">
       <DependentUpon>201811210328075_Add display name for properties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811230954180_Add avatar property to employee entity.resx">
+      <DependentUpon>201811230954180_Add avatar property to employee entity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
