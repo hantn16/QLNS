@@ -37,6 +37,9 @@ namespace QLNS.UI.Views.Position
             .SetBinding(x => x.SelectedEntity,
             args => args.Row as QLNS.Model.Models.Position,
             (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            fluent.WithEvent<RowCellClickEventArgs>(gridView1, "RowCellClick")
+                .EventToCommand(
+                    x => x.Edit(null), x => x.SelectedEntity, args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
             GridViewHelper.ShowOrHideGridViewColumns(gridView1, new List<string> { "Employees","WorkingProcesses"},false);
         }
     }

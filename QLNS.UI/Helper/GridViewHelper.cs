@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraGrid.Columns;
+﻿using DevExpress.Utils.MVVM;
+using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using System;

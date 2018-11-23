@@ -12,6 +12,7 @@ using QLNS.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
 using System.Data.Entity;
 using QLNS.UI.Helper;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLNS.UI.Views.Department
 {
@@ -36,6 +37,9 @@ namespace QLNS.UI.Views.Department
                 .SetBinding(x => x.SelectedEntity,
                 args => args.Row as QLNS.Model.Models.Department,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            fluent.WithEvent<RowCellClickEventArgs>(gridView1, "RowCellClick")
+                .EventToCommand(
+                    x => x.Edit(null), x => x.SelectedEntity, args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
             List<string> listClHide = new List<string> { "Employees", "WorkingProcesses" };
             GridViewHelper.ShowOrHideGridViewColumns(gridView1, listClHide, false);
         }

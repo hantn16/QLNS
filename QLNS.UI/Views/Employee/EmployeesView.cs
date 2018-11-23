@@ -16,6 +16,7 @@ using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
 using QLNS.Service;
 using QLNS.Data;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLNS.UI.Views.Employee
 {
@@ -41,6 +42,9 @@ namespace QLNS.UI.Views.Employee
                 .SetBinding(x => x.SelectedEntity,
                 args => args.Row as QLNS.Model.Models.Employee,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            fluent.WithEvent<RowCellClickEventArgs>(gridView1, "RowCellClick")
+                .EventToCommand(
+                    x => x.Edit(null), x => x.SelectedEntity, args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
             List<string> listClHide = new List<string> { "Email",
                 "DateOfBirth",
                 "Gender",

@@ -38,7 +38,10 @@ namespace QLNS.UI.Views.Employee
         private void LookUpEdit_CustomDisplayText(object sender, DevExpress.XtraEditors.Controls.CustomDisplayTextEventArgs e)
         {
             LookUpEdit lookUpEdit = sender as LookUpEdit;
-            if (e.Value != null && (int)e.Value == 0) e.DisplayText = lookUpEdit.Properties.NullText;
+            if (e.Value != null) // && (int) e.Value == 0
+            {
+                e.DisplayText = lookUpEdit.Properties.NullText;
+            } 
         }
     }
 }
