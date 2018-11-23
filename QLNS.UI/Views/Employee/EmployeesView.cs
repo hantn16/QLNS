@@ -10,6 +10,12 @@ using System.Windows.Forms;
 using DevExpress.Utils.MVVM.UI;
 using QLNS.UI.ViewModels;
 using DevExpress.XtraGrid.Views.Base;
+using QLNS.UI.Helper;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraEditors.Repository;
+using QLNS.Service;
+using QLNS.Data;
 
 namespace QLNS.UI.Views.Employee
 {
@@ -35,6 +41,30 @@ namespace QLNS.UI.Views.Employee
                 .SetBinding(x => x.SelectedEntity,
                 args => args.Row as QLNS.Model.Models.Employee,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
+            List<string> listClHide = new List<string> { "Email",
+                "DateOfBirth",
+                "Gender",
+                "Phone",
+                "IDCardNo",
+                "DateIssued",
+                "PlaceIssued",
+                "Department",
+                "Leader",
+                "Position"
+            };
+            GridViewHelper.ShowOrHideGridViewColumns(gridView1, listClHide, false);
+            GridColumn gc = gridView1.Columns["Department"];
+            RepositoryItemLookUpEdit lookUpEdit = new RepositoryItemLookUpEdit() { };
+        }
+
+        private void gridView1_CustomColumnDisplayText(object sender, CustomColumnDisplayTextEventArgs e)
+        {
+            ColumnView view = sender as ColumnView;
+            if (e.Column.FieldName == "DepartmentId" && e.Value != null)
+            {
+                //QLNS.Model.Models.Department department = new MyQLNSDbContext().Departments
+                //e.DisplayText = department.Name;
+            }
         }
     }
 }
