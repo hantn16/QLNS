@@ -17,6 +17,8 @@ using DevExpress.XtraEditors.Repository;
 using QLNS.Service;
 using QLNS.Data;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Views.Layout.Events;
+using DevExpress.XtraGrid.Views.Layout;
 
 namespace QLNS.UI.Views.Employee
 {
@@ -36,15 +38,15 @@ namespace QLNS.UI.Views.Employee
         private void InitBindings()
         {
             var fluent = mvvmContext1.OfType<EmployeeCollectionViewModel>();
-            fluent.SetBinding(gridView1, gView => gView.LoadingPanelVisible, x => x.IsLoading);
+            //fluent.SetBinding(cardView1, gView => gView.LoadingPanelVisible, x => x.IsLoading);
             fluent.SetBinding(gridControl1, gControl => gControl.DataSource, x => x.Entities);
-            fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(gridView1, "FocusedRowObjectChanged")
+            fluent.WithEvent<ColumnView, FocusedRowObjectChangedEventArgs>(cardView1, "FocusedRowObjectChanged")
                 .SetBinding(x => x.SelectedEntity,
                 args => args.Row as QLNS.Model.Models.Employee,
                 (gView, entity) => gView.FocusedRowHandle = gView.FindRow(entity));
-            fluent.WithEvent<RowCellClickEventArgs>(gridView1, "RowCellClick")
-                .EventToCommand(
-                    x => x.Edit(null), x => x.SelectedEntity, args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
+            //fluent.WithEvent<RowCellClickEventArgs>(gridView1, "RowCellClick")
+            //    .EventToCommand(
+            //        x => x.Edit(null), x => x.SelectedEntity, args => (args.Clicks == 2) && (args.Button == MouseButtons.Left));
             List<string> listClHide = new List<string> { "Email",
                 "DateOfBirth",
                 "Gender",
@@ -56,8 +58,8 @@ namespace QLNS.UI.Views.Employee
                 "LeaderId",
                 "PositionId"
             };
-            GridViewHelper.ShowOrHideGridViewColumns(gridView1, listClHide, false);
-            GridColumn gc = gridView1.Columns["Department"];
+            //GridViewHelper.ShowOrHideGridViewColumns(cardView1, listClHide, false);
+            GridColumn gc = cardView1.Columns["Department"];
             RepositoryItemLookUpEdit lookUpEdit = new RepositoryItemLookUpEdit() { };
         }
 
