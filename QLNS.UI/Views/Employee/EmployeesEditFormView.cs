@@ -43,5 +43,12 @@ namespace QLNS.UI.Views.Employee
                 e.DisplayText = lookUpEdit.Properties.NullText;
             } 
         }
+
+        private void AvatarPictureEdit_ImageChanged(object sender, EventArgs e)
+        {
+            PictureEdit obj = sender as PictureEdit;
+            var imgPath = obj.GetLoadedImageLocation();
+            
+        }
     }
 }

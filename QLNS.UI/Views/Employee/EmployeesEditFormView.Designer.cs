@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeesEditFormView));
-            DevExpress.Utils.ContextButton contextButton2 = new DevExpress.Utils.ContextButton();
+            DevExpress.Utils.ContextButton contextButton1 = new DevExpress.Utils.ContextButton();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
             this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
@@ -536,16 +536,17 @@
             this.AvatarPictureEdit.Location = new System.Drawing.Point(12, 12);
             this.AvatarPictureEdit.MenuManager = this.ribbonControl1;
             this.AvatarPictureEdit.Name = "AvatarPictureEdit";
-            contextButton2.Alignment = DevExpress.Utils.ContextItemAlignment.MiddleBottom;
-            contextButton2.Id = new System.Guid("f743be70-85d3-42d0-bd39-4305ca77eac6");
-            contextButton2.Name = "contextButton1";
-            this.AvatarPictureEdit.Properties.ContextButtons.Add(contextButton2);
+            contextButton1.Alignment = DevExpress.Utils.ContextItemAlignment.MiddleBottom;
+            contextButton1.Id = new System.Guid("f743be70-85d3-42d0-bd39-4305ca77eac6");
+            contextButton1.Name = "contextButton1";
+            this.AvatarPictureEdit.Properties.ContextButtons.Add(contextButton1);
             this.AvatarPictureEdit.Properties.ErrorImage = ((System.Drawing.Image)(resources.GetObject("AvatarPictureEdit.Properties.ErrorImage")));
             this.AvatarPictureEdit.Properties.PictureStoreMode = DevExpress.XtraEditors.Controls.PictureStoreMode.ByteArray;
             this.AvatarPictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.AvatarPictureEdit.Size = new System.Drawing.Size(144, 127);
             this.AvatarPictureEdit.StyleController = this.dataLayoutControl1;
             this.AvatarPictureEdit.TabIndex = 17;
+            this.AvatarPictureEdit.ImageChanged += new System.EventHandler(this.AvatarPictureEdit_ImageChanged);
             // 
             // layoutControlGroup1
             // 
